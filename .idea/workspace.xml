@@ -2,63 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a83ca01f-ce3d-46e1-8190-66f9e3291e3f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/__presence/client/widgets/tracking/js/controllers/trackingCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/__presence/client/widgets/tracking/js/directives/tracking-widget.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/__presence/client/widgets/tracking/less/tracking.less" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/images/blue-spinner-32x32.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/js/filters/filterTricksByName.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/css/vendor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/js/vendor.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/__presence/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.jshintrc" afterPath="$PROJECT_DIR$/__presence/.jshintrc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/__presence/LICENSE" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/__presence/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/__presence/bower.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/app.js" afterPath="$PROJECT_DIR$/__presence/client/common/js/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/controllers/mainCtrl.js" afterPath="$PROJECT_DIR$/__presence/client/common/js/controllers/mainCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/controllers/rootCtrl.js" afterPath="$PROJECT_DIR$/__presence/client/common/js/controllers/rootCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/directives/modal.js" afterPath="$PROJECT_DIR$/__presence/client/common/js/directives/modal.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/directives/siteHeader.js" afterPath="$PROJECT_DIR$/__presence/client/common/js/directives/siteHeader.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/modules/ramda.js" afterPath="$PROJECT_DIR$/__presence/client/common/js/modules/ramda.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/services/flashSvc.js" afterPath="$PROJECT_DIR$/__presence/client/common/js/services/flashSvc.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/services/locationSvc.js" afterPath="$PROJECT_DIR$/__presence/client/common/js/services/locationSvc.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/js/services/trickionarySvc.js" afterPath="$PROJECT_DIR$/__presence/client/widgets/tracking/js/services/trackingSvc.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/less/footer.less" afterPath="$PROJECT_DIR$/__presence/client/common/less/footer.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/less/header.less" afterPath="$PROJECT_DIR$/__presence/client/common/less/header.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/less/layout.less" afterPath="$PROJECT_DIR$/__presence/client/common/less/layout.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/less/mixins.less" afterPath="$PROJECT_DIR$/__presence/client/common/less/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/less/modal.less" afterPath="$PROJECT_DIR$/__presence/client/common/less/modal.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/less/normalize.less" afterPath="$PROJECT_DIR$/__presence/client/common/less/normalize.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/less/style.less" afterPath="$PROJECT_DIR$/__presence/client/common/less/style.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/assets/less/theme.less" afterPath="$PROJECT_DIR$/__presence/client/common/less/theme.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/development.js" afterPath="$PROJECT_DIR$/__presence/config/development.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/production.js" afterPath="$PROJECT_DIR$/__presence/config/production.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/test.js" afterPath="$PROJECT_DIR$/__presence/config/test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/assets/images/blue-spinner-32x32.gif" afterPath="$PROJECT_DIR$/__presence/client/common/images/blue-spinner-32x32.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/__presence/gulpfile.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gulpfiles/clean-folder.js" afterPath="$PROJECT_DIR$/__presence/gulpfiles/clean-folder.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gulpfiles/gulp-compile.js" afterPath="$PROJECT_DIR$/__presence/gulpfiles/gulp-compile.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gulpfiles/gulp-server.js" afterPath="$PROJECT_DIR$/__presence/gulpfiles/gulp-server.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gulpfiles/gulp-test.js" afterPath="$PROJECT_DIR$/__presence/gulpfiles/gulp-test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gulpfiles/scripts.js" afterPath="$PROJECT_DIR$/__presence/gulpfiles/scripts.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gulpfiles/styles.js" afterPath="$PROJECT_DIR$/__presence/gulpfiles/styles.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/__presence/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/controllers/index.js" afterPath="$PROJECT_DIR$/__presence/server/controllers/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/middleware/allowCors.js" afterPath="$PROJECT_DIR$/__presence/server/middleware/allowCors.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/routes/index.js" afterPath="$PROJECT_DIR$/__presence/server/routes/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/__presence/server/server.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/utils/log.js" afterPath="$PROJECT_DIR$/__presence/server/utils/log.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/views/layout.jade" afterPath="$PROJECT_DIR$/__presence/server/views/layout.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/views/pages/index.jade" afterPath="$PROJECT_DIR$/__presence/server/views/pages/index.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/views/partials/persist-user-to-localstorage.jade" afterPath="$PROJECT_DIR$/__presence/server/views/partials/persist-user-to-localstorage.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PageBuilderV1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,82 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="json3.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/lib/json3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="json3.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/lib/json3.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/LICENSE">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/.bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CHANGELOG.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/CHANGELOG.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CONTRIBUTING.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/CONTRIBUTING.md">
           <provider selected="true" editor-type-id="text-editor">
@@ -379,11 +247,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="browsers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="browsers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__presence/bower_components/ramda/lib/sauce/browsers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__reference/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/__reference/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5106383">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trackingSvc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__presence/client/widgets/tracking/js/services/trackingSvc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__presence/client/common/js/controllers/mainCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__presence/client/common/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -420,6 +351,9 @@
         <option value="$PROJECT_DIR$/gulpfiles/scripts.js" />
         <option value="$PROJECT_DIR$/gulpfiles/gulp-compile.js" />
         <option value="$PROJECT_DIR$/gulpfiles/styles.js" />
+        <option value="$PROJECT_DIR$/__presence/client/widgets/tracking/js/services/trackingSvc.js" />
+        <option value="$PROJECT_DIR$/__presence/client/common/js/controllers/mainCtrl.js" />
+        <option value="$PROJECT_DIR$/__presence/client/common/js/app.js" />
       </list>
     </option>
   </component>
@@ -480,8 +414,18 @@
               <option name="myItemId" value="PageBuilderV1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="__presence" />
+              <option name="myItemId" value="PageBuilderV1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PageBuilderV1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__reference" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,6 +436,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PageBuilderV1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__reference" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PageBuilderV1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PageBuilderV1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__reference" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -946,16 +920,16 @@
       <created>1449522991771</created>
       <option name="number" value="Default" />
       <updated>1449522991771</updated>
-      <workItem from="1449522993045" duration="4781000" />
+      <workItem from="1449522993045" duration="6899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4781000" />
+    <option name="totallyTimeSpent" value="6899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="16" y="23" width="1440" height="834" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1190,12 +1164,12 @@
     <entry file="file://$PROJECT_DIR$/__presence/bower_components/ramda/lib/sauce/browsers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/directives/siteHeader.js">
+    <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/lib/json3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1203,7 +1177,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/controllers/mainCtrl.js">
+    <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/lib/json3.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1211,15 +1185,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/.gitignore">
+    <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1227,118 +1193,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/directives/modal.js">
+    <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/images/blue-spinner-32x32.gif">
-      <provider selected="true" editor-type-id="images">
+      <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/controllers/rootCtrl.js">
+    <entry file="file://$PROJECT_DIR$/__presence/bower_components/json3/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/modules/ramda.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/services/flashSvc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/services/locationSvc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/less/footer.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/less/header.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/less/layout.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/less/mixins.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/less/modal.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/less/normalize.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/less/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/common/less/theme.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1347,61 +1215,52 @@
     <entry file="file://$PROJECT_DIR$/__presence/client/widgets/tracking/js/services/trackingSvc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/widgets/tracking/less/tracking.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6666667">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <marker date="1449526194000" expanded="true" signature="41:45" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/widgets/tracking/js/controllers/trackingCtrl.js">
+    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/controllers/mainCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/client/widgets/tracking/js/directives/tracking-widget.js">
+    <entry file="file://$PROJECT_DIR$/__presence/client/common/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/gulpfiles/scripts.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/gulpfiles/gulp-compile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-96.0">
-          <caret line="144" column="25" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__presence/gulpfiles/styles.js">
+    <entry file="file://$PROJECT_DIR$/__reference/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1449526909000" expanded="true" signature="45:88" placeholder="[...]" />
-          </folding>
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__reference/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5106383">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

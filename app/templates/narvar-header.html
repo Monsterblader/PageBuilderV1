@@ -1,0 +1,7 @@
+<nav class="navbar" ng-class="{'navbar-fixed-top':fixed}">
+  <a class="navbar-brand navbar-brand-{{align}}" href="{{link}}" alt="{{text}}">
+    <span ng-if="img === undefined">{{text}}</span>
+    <span class="hiddentext" ng-if="img !== undefined">{{text}}</span>
+    <img src="{{img}}" ng-if="img !== undefined">
+  </a>
+</nav>

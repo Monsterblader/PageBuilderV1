@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2 text-left text-center-xs-down" ng-switch on="type">
+    <div class="animate-switch" ng-switch-when="stars">
+      <p><strong>{{(stars.hover === -1) ? stars.description.title : stars.description.adjectives[stars.hover] }}</strong></p>
+    </div>
+    <div class="animate-switch" ng-switch-when="timing">
+      <p><strong>{{timing.description.title}}</strong></p>
+    </div>
+    <div class="animate-switch" ng-switch-when="comment">
+      <p><strong>{{comment.description.title}}</strong></p>
+    </div>
+    <div class="animate-switch" ng-switch-when="complete">
+      <p>
+        <strong>{{complete.description.title}}</strong><br>
+        {{complete.description.sub}}
+      </p>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 text-center text-right-sm-up" ng-switch on="type">
+    <div class="animate-switch" ng-switch-when="stars">
+      <ul class="list-inline">
+        <li ng-repeat="adjective in stars.description.adjectives track by $index">
+          <i class="fa survey-stars-star" ng-class="(stars.hover >= $index) ? 'fa-star' : 'fa-star-o'" ng-mouseenter="stars.hover = $index" ng-mouseleave="stars.hover = -1" ng-click="stars.record($index)"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="animate-switch" ng-switch-when="timing">
+      <ul class="list-inline">
+        <li ng-repeat="adjective in timing.description.adjectives track by $index">
+          <button type="button" class="btn btn-sm" ng-class="hover === true ? 'btn-primary' : 'btn-primary-outline'" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-click="timing.record(adjective)">{{adjective}}</button>
+        </li>
+      </ul>
+    </div>
+    <div class="animate-switch" ng-switch-when="comment">
+      <div class="input-group input-group-sm">
+        <input type="text" class="form-control" placeholder="{{comment.description.placeholder}}" ng-model="comment.value">
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-sm" ng-class="hover === true ? 'btn-primary' : 'btn-primary-outline'" ng-click="comment.record(comment.value)">{{comment.description.submit}}</button>
+        </span>
+      </div>
+    </div>
+    <div class="animate-switch" ng-switch-when="complete">
+      <a href="{{complete.description.button.href}}" class="btn" ng-class="hover === true ? 'btn-primary' : 'btn-primary-outline'">{{complete.description.button.text}}</a>
+    </div>
+  </div>
+</div>

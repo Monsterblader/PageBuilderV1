@@ -1,0 +1,49 @@
+<#if scope.retailer.sms_push=true>
+  <#-- SMS Widget -->
+  <div id="sms-widget-mobile" class="sms-widget-mobile carousel">
+    <div class="sms-widget-info">
+      <div class="sms-icon">
+        <img class="banner-ad-img" src="https://assets.narvar.com/retailers/general/sms-icon_1x.png" data-src@2x="https://assets.narvar.com/retailers/general/sms-icon_2x.png"/>
+      </div>
+      <h4 class="sms-header">${lg.sms_heading_title!"Stay Informed"}</h4>
+      <p class="sms-body-text">${lg.sms_body_text!"SMS tracking notifications"}</p>
+      <div><p class="sms-response-msg"></p></div>
+    </div>
+    <div class="sms-widget-form">
+      <input id="sms-input-mobile" type="tel" name="sms-phone" class="sms-input pull-left" placeholder="${lg.sms_tel_placeholder!}" />
+      <a href="#" class="small-btn sms-widget-btn pull-right" id="sms-signup-mobile">${lg.sms_submit_btn!"Sign Up"}</a>
+    </div>
+    <div class="sms-widget-success">
+      <a href="${lg.sms_success_btn_target_url!}" target="_blank" data-advid="continueShopping_mobile" class="banner_ad_link sms-widget-btn">${lg.sms_success_btn!"Continue Shopping"}</a>
+    </div>
+    <div id="sms-widget-checkbox" class="sms-widget-opt-in pull-right">
+      <div class="sms-widget-checkbox-container" style="width:10%;">
+      <div class="sms-widget-checkbox pull-left">
+        <input type="checkbox" value="checked" id="sms-checkbox" name="check" class="sms-input-check"/>
+        <label for="sms-checkbox"></label>
+      </div>
+      </div>
+      <div class="sms-widget-opt-in-info pull-right" style="width:90%;">
+        <p>${lg.sms_opt_in_body_text!}</p>
+        <a href="${lg.sms_opt_in_policy_url!}" target="_blank" class="pull-left">${lg.sms_opt_in_policy_label!}</a>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="/public/intl-styles/intlTelInput.css"/>
+  <script type="text/javascript" src="/public/jquery/intlTelInput.js"></script>
+  <script type="text/javascript" src="/public/jquery/sms-widget.js"></script>
+  <script type="text/javascript">
+    if ( typeof smsWidgetOptions === "undefined" || smsWidgetOptions.template !== "mobile" ) {
+      var smsWidgetOptions = {
+        smsButton: "#sms-signup-mobile",
+        retailerName: '${scope.retailer.moniker}',
+        carrierName: '${scope.carrier.cid}',
+        errorMessage: '${lg.sms_error_msg!}',
+        successMessage: '${lg.sms_success_msg!}',
+        template: "mobile"
+      };
+    }
+    $("#sms-input-mobile").smsWidget( smsWidgetOptions );
+  </script>
+  <#-- End SMS Widget -->
+</#if>

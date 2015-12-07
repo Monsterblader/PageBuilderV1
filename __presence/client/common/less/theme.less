@@ -1,0 +1,79 @@
+@import './mixins';
+
+@colorPrimary    : #5a8aba;
+@colorSuccess    : lightgreen;
+@gradientPrimary : #6fabe7;
+
+@tabletPortraitWidth  : 768px;
+@tabletLandscapeWidth : 1024px;
+@mobilePortraitWidth  : 400px;
+@mobileLandscapeWidth : 680px;
+
+html, body {
+  font-family : 'Source Sans Pro', Helvetica, sans-serif;
+  font-weight : 300;
+  font-size   : 15px;
+  color       : #000;
+  background-color : #FFF;
+  a {
+    color           : @colorPrimary;
+    text-decoration : underline;
+    cursor          : pointer;
+  }
+
+  h1 {
+    font-size      : 1.5rem;
+    text-transform : uppercase;
+    color          : @colorPrimary;
+  }
+
+  i {
+    display    : inline-block;
+    min-height : 1rem;
+    min-width  : 1rem;
+  }
+
+  a {
+    outline : none !important;
+
+    i {
+      .easeInOutQuint(200ms);
+      &:hover {
+        transform : scale(1.2);
+      }
+    }
+  }
+
+  .clickable {
+    cursor : pointer;
+  }
+
+  span.success {
+    color : seagreen;
+  }
+
+  span.error {
+    color : darkred;
+  }
+
+  .strong {
+    font-weight : bold;
+  }
+
+  input.md-input.ng-invalid.ng-dirty {
+    outline       : none;
+    border-bottom : 2px solid #DC4A3D;
+    width         : 100%;
+  }
+
+  input.md-input.ng-touched.ng-valid {
+    outline       : none;
+    border-bottom : 2px solid #5acc4b;
+    width         : 100%;
+  }
+
+  md-radio-group.md-default-theme:focus:not(:empty) {
+    border : none;
+  }
+
+}

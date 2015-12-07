@@ -18,12 +18,12 @@
       $locationProvider.html5Mode(true);
       $httpProvider.interceptors.push('FlashSvcInterceptor');
 
-      var shippingPromise = ['$q', 'R', 'ShippingSvc', function($q, R, ShippingSvc) {
+      var shippingPromise = ['$q', 'R', 'TrackingSvc', function($q, R, TrackingSvc) {
 
         var deferred = $q.defer();
 
-        ShippingSvc.resources.shipping.get(function(response) {
-          ShippingSvc.shipping = R.prop('data', response);
+        TrackingSvc.resources.shipping.get(function(response) {
+          TrackingSvc.shipping = R.prop('data', response);
           deferred.resolve();
         });
 
@@ -31,13 +31,13 @@
       }];
 
       $routeProvider.
-        //when('/', {
-        //  templateUrl : '/pages/index',
-        //  controller  : 'MainCtrl as mainCtrl'
-        //}).
+        when('/', {
+          templateUrl : '/pages/index',
+          controller  : 'MainCtrl as mainCtrl'
+        }).
         when('/shipping', {
           templateUrl    : '/pages/shipping',
-          controller     : 'ShippingCtrl as shippingCtrl',
+          controller     : 'TrackingCtrl as shippingCtrl',
           resolve        : {
             shipping : shippingPromise
           },
@@ -45,7 +45,7 @@
         }).
         when('/shipping/:trackingNumber', {
           templateUrl    : '/pages/shipping',
-          controller     : 'ShippingCtrl as shippingCtrl',
+          controller     : 'TrackingCtrl as shippingCtrl',
           resolve        : {
             shipping : shippingPromise
           },

@@ -23,10 +23,6 @@
         expires : new Date() // Expired on init so first resource call will seed cache
       };
 
-      /**
-       *
-       * @type {{tricks: *, search: Function}}
-       */
       svc.resources = {
 
         /**

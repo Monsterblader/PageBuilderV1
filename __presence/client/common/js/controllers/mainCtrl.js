@@ -9,10 +9,10 @@
    * # MainCtrl
    * Main controller for the home page
    */
-  angular.module('narvar').controller('MainCtrl', ['TricktionarySvc',
-    function (TricktionarySvc) {
+  angular.module('narvar').controller('MainCtrl', ['TrackingSvc',
+    function (TrackingSvc) {
 
-      this.tricktionarySvc = TricktionarySvc;
+      this.trackingSvc = TrackingSvc;
 
     }]);
 

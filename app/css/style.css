@@ -1,0 +1,218 @@
+/** Responsive Text Align for Bootstrap v4-alpha **/
+
+/* Text Align Up */
+@media (min-width: 34em) {
+  .text-center-sm-up {
+    text-align: center;
+  }
+  .text-right-sm-up {
+    text-align: right;
+  }
+  .text-left-sm-up {
+    text-align: left;
+  }
+}
+
+@media (min-width: 48em) {
+  .text-center-md-up {
+    text-align: center;
+  }
+  .text-right-md-up {
+    text-align: right;
+  }
+  .text-left-md-up {
+    text-align: left;
+  }
+}
+
+@media (min-width: 62em) {
+  .text-center-lg-up {
+    text-align: center;
+  }
+  .text-right-lg-up {
+    text-align: right;
+  }
+  .text-left-lg-up {
+    text-align: left;
+  }
+}
+
+@media (min-width: 75em) {
+  .text-center-xl-up {
+    text-align: center;
+  }
+  .text-right-xl-up {
+    text-align: right;
+  }
+  .text-left-xl-up {
+    text-align: left;
+  }
+}
+
+/* Text Align Down */
+@media (max-width: 33.9em) {
+  .text-center-xs-down {
+    text-align: center;
+  }
+  .text-right-xs-down {
+    text-align: right;
+  }
+  .text-left-xs-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 37.9em) {
+  .text-center-sm-down {
+    text-align: center;
+  }
+  .text-right-sm-down {
+    text-align: right;
+  }
+  .text-left-sm-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 41.9em) {
+  .text-center-md-down {
+    text-align: center;
+  }
+  .text-right-md-down {
+    text-align: right;
+  }
+  .text-left-md-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 74.9em) {
+  .text-center-lg-down {
+    text-align: center;
+  }
+  .text-right-lg-down {
+    text-align: right;
+  }
+  .text-left-lg-down {
+    text-align: left;
+  }
+}
+
+/** Animations **/
+
+/* fadeIn taken from Animate.css */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate-switch.ng-enter {
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+narvar-header .navbar-brand {
+  margin: 0;
+}
+narvar-header .navbar-brand.navbar-brand-left {
+  float: left;
+}
+narvar-header .navbar-brand.navbar-brand-center {
+  display: table;
+  margin: 0 auto;
+  float: none;
+}
+narvar-header .navbar-brand.navbar-brand-right {
+  float: right;
+}
+
+narvar-header .hiddentext {
+  position: absolute !important;
+  overflow: hidden !important;
+  display: block !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+narvar-footer p, narvar-footer a, narvar-footer a:hover {
+  color: #ccc;
+  font-size: 9px;
+}
+
+narvar-faq .carousel-indicators-with-controls {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+}
+
+narvar-faq .carousel-indicators-with-controls .carousel-indicators {
+  position: relative;
+  display: inline-block;
+  bottom: auto;
+  left: auto;
+  z-index: 0;
+  width: auto;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: center;
+  list-style: none;
+}
+
+narvar-faq .carousel-indicators-with-controls .carousel-indicators li {
+  border-color: #000;
+}
+
+narvar-faq .carousel-indicators-with-controls .carousel-indicators .active {
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  background-color: #000;
+}
+
+narvar-faq .carousel-indicators-with-controls a {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  text-indent: 0;
+  color: #000;
+}
+
+narvar-faq .carousel-indicators-with-controls a:hover {
+  color: #000;
+}
+
+narvar-faq .carousel-indicators-with-controls a:before {
+  position: absolute;
+  top: -.62em;
+  left: 0;
+  font-size: 1.5em;
+}
+
+narvar-faq .carousel-indicators-with-controls .icon-prev:before {
+  content: "\2039";
+}
+
+narvar-faq .carousel-indicators-with-controls .icon-next:before {
+  content: "\203a";
+}

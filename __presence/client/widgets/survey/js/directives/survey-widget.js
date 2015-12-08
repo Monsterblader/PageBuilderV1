@@ -4,16 +4,20 @@
   /**
    * @ngdoc function
    * @author seancannon
-   * @name narvar.directive.footerWidget
+   * @name narvar.directive.surveyWidget
    * @description
-   * # footerWidget
+   * # surveyWidget
    * Displays tracking information
    */
-  angular.module('narvar').directive('footerWidget', ['R',
+  angular.module('narvar').directive('surveyWidget', ['R',
     function(R) {
       return {
-        restrict : 'E',
-        link     : function(scope, element, attrs) {
+        restrict    : 'E',
+        scope       : {
+
+        },
+        templateUrl : '../templates/survey-widget.tpl.html',
+        link        : function(scope, element, attrs) {
 
         }
       }

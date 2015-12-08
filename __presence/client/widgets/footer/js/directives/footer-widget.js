@@ -4,16 +4,18 @@
   /**
    * @ngdoc function
    * @author seancannon
-   * @name narvar.directive.headerWidget
+   * @name narvar.directive.footerWidget
    * @description
-   * # headerWidget
+   * # footerWidget
    * Displays tracking information
    */
-  angular.module('narvar').directive('headerWidget', ['R',
+  angular.module('narvar').directive('footerWidget', ['R',
     function(R) {
       return {
-        restrict : 'E',
-        link     : function(scope, element, attrs) {
+        restrict    : 'E',
+        scope       : {},
+        templateUrl : '../templates/footer-widget.tpl.html',
+        link        : function(scope, element, attrs) {
 
         }
       }

@@ -4,12 +4,12 @@
   /**
    * @ngdoc function
    * @author seancannon
-   * @name narvar.directive.footerWidget
+   * @name narvar.directive.trackingStatusWidget
    * @description
-   * # footerWidget
+   * # trackingStatusWidget
    * Displays tracking information
    */
-  angular.module('narvar').directive('footerWidget', ['R',
+  angular.module('narvar').directive('trackingStatusWidget', ['R',
     function(R) {
       return {
         restrict : 'E',

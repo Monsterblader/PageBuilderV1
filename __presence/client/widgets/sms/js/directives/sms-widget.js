@@ -4,12 +4,12 @@
   /**
    * @ngdoc function
    * @author seancannon
-   * @name narvar.directive.footerWidget
+   * @name narvar.directive.smsWidget
    * @description
-   * # footerWidget
+   * # smsWidget
    * Displays tracking information
    */
-  angular.module('narvar').directive('footerWidget', ['R',
+  angular.module('narvar').directive('smsWidget', ['R',
     function(R) {
       return {
         restrict : 'E',

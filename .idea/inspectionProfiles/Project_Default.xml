@@ -5,7 +5,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="11">
+          <list size="17">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -17,6 +17,12 @@
             <item index="8" class="java.lang.String" itemvalue="md-radio-group" />
             <item index="9" class="java.lang.String" itemvalue="tracking" />
             <item index="10" class="java.lang.String" itemvalue="tracking-widget" />
+            <item index="11" class="java.lang.String" itemvalue="footer-widget" />
+            <item index="12" class="java.lang.String" itemvalue="header-widget" />
+            <item index="13" class="java.lang.String" itemvalue="tracking-status-widget" />
+            <item index="14" class="java.lang.String" itemvalue="survey-widget" />
+            <item index="15" class="java.lang.String" itemvalue="faq-widget" />
+            <item index="16" class="java.lang.String" itemvalue="sms-widget" />
           </list>
         </value>
       </option>

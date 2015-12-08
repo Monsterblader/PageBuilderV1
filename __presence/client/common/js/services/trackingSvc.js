@@ -29,7 +29,7 @@
          * Grab the tracking information from the server.
          * @todo this is a placeholder, remove before delivery
          */
-        tracking : $resource('/api/tracking/', null, {
+        tracking : $resource('/api/v0.0.0/tracking', null, {
           'get' : {
 
             /**

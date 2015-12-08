@@ -28,6 +28,8 @@ app.get('/views/*', function(req, res) {
   res.render(path.join(app.get('views'), req.params[0]));
 });
 
+app.use (express.static( './dist'));
+
 app.use('/', pageRoutes);
 
 R.forEach(http.listen.bind(http), config.server.enabledPorts);

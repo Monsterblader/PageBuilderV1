@@ -1,79 +1,122 @@
 @import './mixins';
 
-@colorPrimary    : #5a8aba;
-@colorSuccess    : lightgreen;
-@gradientPrimary : #6fabe7;
-
-@tabletPortraitWidth  : 768px;
-@tabletLandscapeWidth : 1024px;
-@mobilePortraitWidth  : 400px;
-@mobileLandscapeWidth : 680px;
-
-html, body {
-  font-family : 'Source Sans Pro', Helvetica, sans-serif;
-  font-weight : 300;
-  font-size   : 15px;
-  color       : #000;
-  background-color : #FFF;
-  a {
-    color           : @colorPrimary;
-    text-decoration : underline;
-    cursor          : pointer;
+/* Text Align Up */
+@media (min-width: 34em) {
+  .text-center-sm-up {
+    text-align: center;
   }
-
-  h1 {
-    font-size      : 1.5rem;
-    text-transform : uppercase;
-    color          : @colorPrimary;
+  .text-right-sm-up {
+    text-align: right;
   }
-
-  i {
-    display    : inline-block;
-    min-height : 1rem;
-    min-width  : 1rem;
+  .text-left-sm-up {
+    text-align: left;
   }
+}
 
-  a {
-    outline : none !important;
-
-    i {
-      .easeInOutQuint(200ms);
-      &:hover {
-        transform : scale(1.2);
-      }
-    }
+@media (min-width: 48em) {
+  .text-center-md-up {
+    text-align: center;
   }
-
-  .clickable {
-    cursor : pointer;
+  .text-right-md-up {
+    text-align: right;
   }
-
-  span.success {
-    color : seagreen;
+  .text-left-md-up {
+    text-align: left;
   }
+}
 
-  span.error {
-    color : darkred;
+@media (min-width: 62em) {
+  .text-center-lg-up {
+    text-align: center;
   }
-
-  .strong {
-    font-weight : bold;
+  .text-right-lg-up {
+    text-align: right;
   }
-
-  input.md-input.ng-invalid.ng-dirty {
-    outline       : none;
-    border-bottom : 2px solid #DC4A3D;
-    width         : 100%;
+  .text-left-lg-up {
+    text-align: left;
   }
+}
 
-  input.md-input.ng-touched.ng-valid {
-    outline       : none;
-    border-bottom : 2px solid #5acc4b;
-    width         : 100%;
+@media (min-width: 75em) {
+  .text-center-xl-up {
+    text-align: center;
   }
-
-  md-radio-group.md-default-theme:focus:not(:empty) {
-    border : none;
+  .text-right-xl-up {
+    text-align: right;
   }
+  .text-left-xl-up {
+    text-align: left;
+  }
+}
 
+/* Text Align Down */
+@media (max-width: 33.9em) {
+  .text-center-xs-down {
+    text-align: center;
+  }
+  .text-right-xs-down {
+    text-align: right;
+  }
+  .text-left-xs-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 37.9em) {
+  .text-center-sm-down {
+    text-align: center;
+  }
+  .text-right-sm-down {
+    text-align: right;
+  }
+  .text-left-sm-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 41.9em) {
+  .text-center-md-down {
+    text-align: center;
+  }
+  .text-right-md-down {
+    text-align: right;
+  }
+  .text-left-md-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 74.9em) {
+  .text-center-lg-down {
+    text-align: center;
+  }
+  .text-right-lg-down {
+    text-align: right;
+  }
+  .text-left-lg-down {
+    text-align: left;
+  }
+}
+
+/** Animations **/
+
+/* fadeIn taken from Animate.css */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate-switch.ng-enter {
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.img-responsive {
+  width: 100%;
 }

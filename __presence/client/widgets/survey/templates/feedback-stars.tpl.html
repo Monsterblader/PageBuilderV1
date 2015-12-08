@@ -1,0 +1,10 @@
+<div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2 text-left text-center-xs-down">
+  <p><strong>{{caption}}</strong></p>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 text-center text-right-sm-up">
+  <ul class="list-inline">
+    <li ng-repeat="adjective in adjectives track by $index">
+      <i class="fa survey-stars-star" ng-class="(hoverIndex >= $index) ? 'fa-star' : 'fa-star-o'" ng-mouseenter="setCaptionFromAdjectivesIndex($index)" ng-mouseleave="resetCaption()" ng-click="record($index)"></i>
+    </li>
+  </ul>
+</div>

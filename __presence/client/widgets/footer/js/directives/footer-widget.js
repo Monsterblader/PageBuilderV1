@@ -14,7 +14,7 @@
       return {
         restrict    : 'E',
         scope       : {},
-        templateUrl : '../templates/footer-widget.tpl.html',
+        templateUrl : 'widgets/footer/templates/footer-widget.html',
         link        : function(scope, element, attrs) {
 
         }

@@ -20,7 +20,7 @@
           align : '@',
           fixed : '@'
         },
-        templateUrl : '../templates/header-widget.tpl.html',
+        templateUrl : 'widgets/header/templates/header-widget.html',
         link        : function(scope, element, attrs) {
 
         }

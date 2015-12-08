@@ -1,15 +1,18 @@
 'use strict';
 
-var R = require('ramda');
+var R              = require('ramda'),
+    userAgentUtils = require('../utils/userAgent');
 
-var index = function(req, res) {
-  var dataForJade = {};
+function index(req, res) {
+  var userAgent    = req.headers['user-agent'].toLowerCase(),
+      browserClass = userAgentUtils.getBrowserClass(userAgent);
 
-  if (req.user) {
-    dataForJade.sessionUser = R.defaultTo('', JSON.stringify(req.user));
-  }
+  res.render('layout', {
+    ip           : req.header('X-Real-Ip'),
+    cacheRev     : process._cacheRev,
+    browserClass : browserClass
+  });
 
-  res.render('pages/index', dataForJade);
-};
+}
 
 module.exports = index;

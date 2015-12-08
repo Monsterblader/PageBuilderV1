@@ -14,12 +14,25 @@
       return {
         restrict    : 'E',
         scope       : {
-
+          steps : '@'
         },
-        templateUrl : '../templates/survey-widget.tpl.html',
-        link        : function(scope, element, attrs) {
+        controller  : function() {
+          this.currentStep = 1;
 
-        }
+          this.nextStep = function() {
+            this.currentStep += 1;
+            return this;
+          };
+
+          this.record = function(type, value) {
+            // TODO remove console log statement and POST
+            console.log(type + ': ' + value);
+            return this.nextStep();
+          };
+        },
+        controllerAs : 'surveyWidgetCtrl',
+        templateUrl  : 'widgets/survey/templates/survey-widget.html',
+        link         : function(scope, element, attrs) {}
       }
     }]);
 }(angular));

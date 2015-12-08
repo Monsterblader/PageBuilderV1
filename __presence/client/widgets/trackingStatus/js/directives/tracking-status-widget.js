@@ -12,8 +12,10 @@
   angular.module('narvar').directive('trackingStatusWidget', ['R',
     function(R) {
       return {
-        restrict : 'E',
-        link     : function(scope, element, attrs) {
+        restrict    : 'E',
+        scope       : {},
+        templateUrl : 'widgets/trackingStatus/templates/tracking-status-widget.html',
+        link        : function(scope, element, attrs) {
 
         }
       }

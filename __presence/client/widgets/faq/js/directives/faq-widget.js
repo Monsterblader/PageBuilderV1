@@ -16,7 +16,7 @@
         scope    : {
           type : '@'
         },
-        templateUrl : '../templates/faq-widget.tpl.html',
+        templateUrl : 'widgets/faq/templates/faq-widget.html',
         link        : function(scope, element, attrs) {
           scope.tabs = [
             {

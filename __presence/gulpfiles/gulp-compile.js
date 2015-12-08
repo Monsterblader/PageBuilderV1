@@ -79,9 +79,10 @@ var transformTemplates = function(templateModuleName) {
 
 var templateConfigs = {
   app : {
-    sources      : './views/**/*.jade',
+    //sources      : './views/**/*.jade',
+    sources      : './client/**/templates/*.tpl.html',
     moduleName   : 'templates-app',
-    destFileName : 'templates-app.js'
+    destFileName : 'assets/js/templates.js'
   }
 };
 

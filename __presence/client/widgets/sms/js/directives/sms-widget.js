@@ -12,8 +12,10 @@
   angular.module('narvar').directive('smsWidget', ['R',
     function(R) {
       return {
-        restrict : 'E',
-        link     : function(scope, element, attrs) {
+        restrict    : 'E',
+        scope       : {},
+        templateUrl : 'widgets/sms/templates/sms-widget.html',
+        link        : function(scope, element, attrs) {
 
         }
       }

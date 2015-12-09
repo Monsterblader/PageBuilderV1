@@ -3,9 +3,7 @@ AngularJS client to render Narvar SAAS widgets.
 
 ## Install Dependencies
 `npm install`
-
-## Run the tests
-`npm test`
+`bower install`
 
 ## Start the app
 `gulp`

@@ -21,6 +21,18 @@ module.exports = {
   ],
   mocks  : ['bower_components/angular-mocks/angular-mocks.js'],
   vendor : [
+
+    // Various third party
+    'bower_components/ramda/dist/ramda.js',
+    'bower_components/es5-shim/es5-shim.js',
+    'bower_components/json3/lib/json3.js',
+
+    // Bootstrap (dependencies first)
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/tether/dist/js/tether.js',
+    'bower_components/bootstrap/dist/js/bootstrap.js',
+
+    // AngularJS specific
     'bower_components/angular/angular.js',
     'bower_components/angular-animate/angular-animate.js',
     'bower_components/angular-cookies/angular-cookies.js',
@@ -29,13 +41,8 @@ module.exports = {
     'bower_components/angular-sanitize/angular-sanitize.js',
     'bower_components/angular-aria/angular-aria.js',
     'bower_components/angular-animate/angular-animate.js',
-    'bower_components/angular-messages/angular-messages.js',
-    'bower_components/angular-material/angular-material.js',
-    'bower_components/ng-file-upload/angular-file-upload.js',
-    'bower_components/hammerjs/hammer.js',
-    'bower_components/es5-shim/es5-shim.js',
-    'bower_components/json3/lib/json3.js',
-    'bower_components/ramda/dist/ramda.js'
+    'bower_components/angular-messages/angular-messages.js'
+
   ],
   vendorMin : [
     // Add minified references from list above if any break when uglifying

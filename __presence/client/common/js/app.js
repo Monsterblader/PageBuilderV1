@@ -9,7 +9,6 @@
     'ngAnimate',
     'ngMessages',
     'ngResource',
-    'ngMaterial',
 
     // Custom modules (app/modules/*)
     'ramda',

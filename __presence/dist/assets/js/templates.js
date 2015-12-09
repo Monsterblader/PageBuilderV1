@@ -50,35 +50,6 @@ try {
   module = angular.module('templates-app', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/footer/templates/footer-widget.html',
-    '<div class="container">\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-xs-6">\n' +
-    '      <p class="pull-left">\n' +
-    '        <a href="http://corp.narvar.com/" target="_blank">\n' +
-    '          <img src="/assets/images/narvar_logo.svg">\n' +
-    '        </a>\n' +
-    '      </p>\n' +
-    '    </div>\n' +
-    '    <div class="col-xs-6">\n' +
-    '      <p class="pull-right">\n' +
-    '        <a href="http://corp.narvar.com/terms/" target="_blank">Terms of Use</a> |\n' +
-    '        <a href="http://corp.narvar.com/terms/" target="_blank">Privacy Policy</a>\n' +
-    '      </p>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
   $templateCache.put('widgets/header/templates/header-widget.html',
     '<h1>HEADER</h1>\n' +
     '<nav class="navbar" ng-class="{\'navbar-fixed-top\':fixed}">\n' +
@@ -235,6 +206,35 @@ module.run(['$templateCache', function($templateCache) {
     '      button-text    = "Continue Shopping"\n' +
     '      button-href    = "http://corp.narvar.com/"\n' +
     '  ></feedback-complete>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/footer/templates/footer-widget.html',
+    '<div class="container">\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-xs-6">\n' +
+    '      <p class="pull-left">\n' +
+    '        <a href="http://corp.narvar.com/" target="_blank">\n' +
+    '          <img src="/assets/images/narvar_logo.svg">\n' +
+    '        </a>\n' +
+    '      </p>\n' +
+    '    </div>\n' +
+    '    <div class="col-xs-6">\n' +
+    '      <p class="pull-right">\n' +
+    '        <a href="http://corp.narvar.com/terms/" target="_blank">Terms of Use</a> |\n' +
+    '        <a href="http://corp.narvar.com/terms/" target="_blank">Privacy Policy</a>\n' +
+    '      </p>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
     '</div>\n' +
     '');
 }]);

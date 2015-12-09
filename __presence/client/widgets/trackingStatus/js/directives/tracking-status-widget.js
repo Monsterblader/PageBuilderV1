@@ -11,6 +11,8 @@
    */
   angular.module('narvar').directive('trackingStatusWidget', ['R', 'TrackingSvc',
     function(R, TrackingSvc) {
+
+      console.log('R = ', window.R);
       return {
         restrict    : 'E',
         scope       : {},

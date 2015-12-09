@@ -5,7 +5,8 @@ module.exports = {
     './client/common/less/style.less'
   ],
   vendor : [
-    './tempCss/bootstrap.css',
+    'bower_components/tether/dist/css/tether.css',
+    'bower_components/bootstrap/dist/css/bootstrap.min.css',
     'bower_components/components-font-awesome/css/font-awesome.min.css'
   ]
 };

@@ -1,0 +1,22 @@
+<form id="gettrack_hint" style="display:none;">
+  <input type="hidden" name="holidays" value="${scope.carrier.holidays!}"/>
+  <input type="hidden" name="carrier-start-day" value="${scope.carrier.service_start_day!}"/>
+  <input type="hidden" name="carrier-end-day" value="${scope.carrier.service_end_day!}"/>
+  <input type="hidden" name="carrier-holidays" value="${scope.carrier.carrier_holidays!}"/>
+  <input type="hidden" name="numWorkingDays" value="${scope.retailer.numWorkingDays}"/>
+  <input type="hidden" name="numStartWorkingDay" value="${scope.retailer.numStartWorkingDay}"/>
+  <input type="hidden" name="eta2_yyyy" value="${scope.dely.eta2.yyyy}"/>
+  <input type="hidden" name="eta2_MMM" value="${scope.dely.eta2.month_short}"/>
+  <input type="hidden" name="eta2_MM" value="${scope.dely.eta2.month}"/>
+  <input type="hidden" name="eta2_date" value="${scope.dely.eta2.date}"/>
+  <input type="hidden" name="eta_yyyy" value="${scope.dely.eta.yyyy}"/>
+  <input type="hidden" name="eta_MMM" value="${scope.dely.eta.month_short}"/>
+  <input type="hidden" name="eta_MM" value="${scope.dely.eta.month}"/>
+  <input type="hidden" name="eta_date" value="${scope.dely.eta.date}"/>
+  <input type="hidden" name="eta_source" value="${scope.dely.eddSource}"/>
+  <input type="hidden" name="eta_source_carrier" value="${scope.dely.etaSourceCarrier}"/>
+  <input type="hidden" name="eta_ok" value="true"/>
+</form>
+<div class="calendar-container">
+  <div class='calendar-row calendar-days'></div>
+</div>

@@ -1,10 +1,12 @@
 faq-widget {
 
-  display : block;
+  display  : block;
+  position : relative;
 
-  border : 12px solid red;
+  border : 1px solid orange;
 
   .carousel-indicators-with-controls {
+    border : 1px solid red;
     position     : absolute;
     bottom       : -20px;
     left         : 50%;
@@ -13,60 +15,62 @@ faq-widget {
     padding-left : 0;
     margin-left  : -30%;
     text-align   : center;
-  }
 
-  .carousel-indicators-with-controls .carousel-indicators {
-    position     : relative;
-    display      : inline-block;
-    bottom       : auto;
-    left         : auto;
-    z-index      : 0;
-    width        : auto;
-    padding-left : 0;
-    margin-left  : 0;
-    text-align   : center;
-    list-style   : none;
-  }
+    .carousel-indicators {
+      border : 1px solid blue;
+      position     : relative;
+      display      : inline-block;
+      bottom       : auto;
+      left         : auto;
+      z-index      : 0;
+      width        : auto;
+      padding-left : 0;
+      margin-left  : 0;
+      text-align   : center;
+      list-style   : none;
 
-  .carousel-indicators-with-controls .carousel-indicators li {
-    border-color : #000;
-  }
+      li {
+        border-color : #000;
+      }
 
-  .carousel-indicators-with-controls .carousel-indicators .active {
-    width            : 10px;
-    height           : 10px;
-    margin           : 1px;
-    background-color : #000;
-  }
+      .active {
+        width            : 10px;
+        height           : 10px;
+        margin           : 1px;
+        background-color : #000;
+      }
+    }
 
-  .carousel-indicators-with-controls a {
-    position      : relative;
-    width         : 10px;
-    height        : 10px;
-    display       : inline-block;
-    border        : 0;
-    border-radius : 0;
-    text-indent   : 0;
-    color         : #000;
-  }
+    a {
+      position      : relative;
+      width         : 10px;
+      height        : 10px;
+      display       : inline-block;
+      border        : 0;
+      border-radius : 0;
+      text-indent   : 0;
+      color         : #000;
 
-  .carousel-indicators-with-controls a:hover {
-    color : #000;
-  }
+      &:hover {
+        color : #000;
+      }
 
-  .carousel-indicators-with-controls a:before {
-    position  : absolute;
-    top       : -.62em;
-    left      : 0;
-    font-size : 1.5em;
-  }
+      &:before {
+        position  : absolute;
+        top       : -.62em;
+        left      : 0;
+        font-size : 1.5em;
+      }
 
-  .carousel-indicators-with-controls .icon-prev:before {
-    content : "\2039";
-  }
+      .icon-prev:before {
+        content : "\2039";
+      }
 
-  .carousel-indicators-with-controls .icon-next:before {
-    content : "\203a";
-  }
+      .icon-next:before {
+        content : "\203a";
+      }
 
+    }
+
+  }
 }

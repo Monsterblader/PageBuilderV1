@@ -1,4 +1,4 @@
-(function (angular, R) {
+(function (angular) {
   'use strict';
 
   /**
@@ -9,8 +9,8 @@
    * # TrackingSvc
    * Service to handle tracking API calls and data persistence
    */
-  angular.module('narvar').service('TrackingSvc', ['$resource', '$cacheFactory',
-    function ($resource, $cacheFactory) {
+  angular.module('narvar').service('TrackingSvc', ['$resource', '$cacheFactory', 'R',
+    function ($resource, $cacheFactory, R) {
       var svc = this;
 
       /**
@@ -55,4 +55,4 @@
 
       return svc;
     }]);
-}(angular, R));
+}(angular));

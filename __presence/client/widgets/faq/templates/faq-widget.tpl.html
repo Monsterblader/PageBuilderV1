@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-xs-12" ng-switch on="type">
     <div id="narvar-faq-slides" class="carousel slide" ng-switch-when="slides">
+      slides...
       <div class="carousel-indicators-with-controls">
         <a class="icon-prev" href="#narvar-faq-slides" data-slide="prev"></a>
         <ol class="carousel-indicators">
@@ -16,6 +17,7 @@
       </div>
     </div>
     <div id="narvar-faq-tabs" role="tablist" ng-switch-default>
+      default...
       <div class="panel panel-default" ng-repeat="tab in tabs track by $index">
         <div class="panel-heading" role="tab">
           <p>

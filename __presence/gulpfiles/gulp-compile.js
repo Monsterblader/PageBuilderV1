@@ -25,7 +25,7 @@ var fonts = [
 ];
 
 var images = [
-  './client/**/images/**/*'
+  './client/common/images/*'
 ];
 
 var publicDest = function(optSubdir) {

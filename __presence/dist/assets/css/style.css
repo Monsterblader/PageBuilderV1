@@ -1,6 +1,3 @@
-@import url('//cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css');
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-@import url('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic,600italic');
 /* ----------- Retina Screens ----------- */
 /* ----------- Non-Retina Screens ----------- */
 /* ----------- Galaxy S3 ----------- */
@@ -676,6 +673,7 @@ modal .modal-wrapper .modal-content.ng-leave.ng-leave-active {
 }
 header-widget {
   display: block;
+  position: relative;
 }
 header-widget .navbar-brand {
   margin: 0;
@@ -703,6 +701,7 @@ header-widget .hiddentext {
 }
 footer-widget {
   display: block;
+  position: relative;
 }
 footer-widget p,
 footer-widget a,
@@ -712,9 +711,11 @@ footer-widget a:hover {
 }
 faq-widget {
   display: block;
-  border: 12px solid red;
+  position: relative;
+  border: 1px solid orange;
 }
 faq-widget .carousel-indicators-with-controls {
+  border: 1px solid red;
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -725,6 +726,7 @@ faq-widget .carousel-indicators-with-controls {
   text-align: center;
 }
 faq-widget .carousel-indicators-with-controls .carousel-indicators {
+  border: 1px solid blue;
   position: relative;
   display: inline-block;
   bottom: auto;
@@ -764,30 +766,37 @@ faq-widget .carousel-indicators-with-controls a:before {
   left: 0;
   font-size: 1.5em;
 }
-faq-widget .carousel-indicators-with-controls .icon-prev:before {
+faq-widget .carousel-indicators-with-controls a .icon-prev:before {
   content: "\2039";
 }
-faq-widget .carousel-indicators-with-controls .icon-next:before {
+faq-widget .carousel-indicators-with-controls a .icon-next:before {
   content: "\203a";
 }
 survey-widget {
   display: block;
+  position: relative;
 }
 survey-widget feedback-comment {
   display: block;
+  position: relative;
 }
 survey-widget feedback-complete {
   display: block;
+  position: relative;
 }
 survey-widget feedback-stars {
   display: block;
+  position: relative;
 }
 survey-widget feedback-timing {
   display: block;
+  position: relative;
 }
 tracking-status-widget {
   display: block;
+  position: relative;
 }
 sms-widget {
   display: block;
+  position: relative;
 }

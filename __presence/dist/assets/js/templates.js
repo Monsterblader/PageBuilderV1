@@ -41,6 +41,35 @@ try {
   module = angular.module('templates-app', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/footer/templates/footer-widget.html',
+    '<div class="container">\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-xs-6">\n' +
+    '      <p class="pull-left">\n' +
+    '        <a href="http://corp.narvar.com/" target="_blank">\n' +
+    '          <img src="/assets/images/narvar_logo.svg">\n' +
+    '        </a>\n' +
+    '      </p>\n' +
+    '    </div>\n' +
+    '    <div class="col-xs-6">\n' +
+    '      <p class="pull-right">\n' +
+    '        <a href="http://corp.narvar.com/terms/" target="_blank">Terms of Use</a> |\n' +
+    '        <a href="http://corp.narvar.com/terms/" target="_blank">Privacy Policy</a>\n' +
+    '      </p>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('widgets/faq/templates/faq-widget.html',
     '<div class="row">\n' +
     '  <div class="col-xs-12" ng-switch on="type">\n' +
@@ -70,35 +99,6 @@ module.run(['$templateCache', function($templateCache) {
     '          {{tab.body}}\n' +
     '        </div>\n' +
     '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/footer/templates/footer-widget.html',
-    '<div class="container">\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-xs-6">\n' +
-    '      <p class="pull-left">\n' +
-    '        <a href="http://corp.narvar.com/" target="_blank">\n' +
-    '          <img src="/assets/images/narvar_logo.svg">\n' +
-    '        </a>\n' +
-    '      </p>\n' +
-    '    </div>\n' +
-    '    <div class="col-xs-6">\n' +
-    '      <p class="pull-right">\n' +
-    '        <a href="http://corp.narvar.com/terms/" target="_blank">Terms of Use</a> |\n' +
-    '        <a href="http://corp.narvar.com/terms/" target="_blank">Privacy Policy</a>\n' +
-    '      </p>\n' +
     '    </div>\n' +
     '  </div>\n' +
     '</div>\n' +

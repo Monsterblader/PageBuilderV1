@@ -19,7 +19,6 @@
   ]).config(['$routeProvider', '$httpProvider', '$locationProvider',
     function($routeProvider, $httpProvider, $locationProvider) {
       $locationProvider.html5Mode(true);
-      //$httpProvider.interceptors.push('FlashSvcInterceptor');
 
       $routeProvider.
         when('/', {

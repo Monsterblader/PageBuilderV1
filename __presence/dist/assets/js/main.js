@@ -29,7 +29,6 @@
   ]).config(['$routeProvider', '$httpProvider', '$locationProvider',
     function($routeProvider, $httpProvider, $locationProvider) {
       $locationProvider.html5Mode(true);
-      //$httpProvider.interceptors.push('FlashSvcInterceptor');
 
       $routeProvider.
         when('/', {
@@ -516,8 +515,6 @@ angular.module('narvar').directive('modal', ['$window', '$timeout',
             var estimatedDelivery = R.path(['tracking', 'estimated_delivery'], response),
                 deviceType        = R.prop('device_type', response);
 
-            //scope.customerCareUrl = R.defaultTo('http://www.narvar.com', R.path(['customer_care', 'url']), response);
-
             scope.estimatedDeliveryRangeStartDay   = R.path(['range_start', 'day'], estimatedDelivery);
             scope.estimatedDeliveryRangeStartMonth = R.path(['range_start', 'month'], estimatedDelivery);
             scope.estimatedDeliveryRangeStartDate  = R.path(['range_start', 'date'], estimatedDelivery);
@@ -542,6 +539,8 @@ angular.module('narvar').directive('modal', ['$window', '$timeout',
             scope.dataAdvIdContact = scope.isMobile ? 'contact_info_mobile' : 'contact_info';
 
             scope.handleBannerAdLinkClick = function() {
+
+              // TODO Replace this shim with business logic.
               console.log(scope.dataAdvIdPackage);
             };
 
@@ -578,209 +577,29 @@ angular.module('narvar').directive('modal', ['$window', '$timeout',
   /**
    * @ngdoc function
    * @author seancannon
-   * @name narvar.directive.feedbackComment
+   * @name narvar.directive.trackingStatusWidget
    * @description
-   * # feedbackComment
-   * General feedback comment
-   */
-  angular.module('narvar').directive('feedbackComment', ['R',
-    function(R) {
-      return {
-        restrict : 'E',
-        require  : '^surveyWidget',
-        scope    : {
-          caption         : '@',
-          placeholderText : '@'
-        },
-        templateUrl : 'widgets/survey/templates/feedback-comment.html',
-        link        : function(scope, element, attrs, surveyWidgetCtrl) {
-
-          /**
-           * Record the value from the customer.
-           * @param {Number} value
-           */
-          scope.record = function(value) {
-            surveyWidgetCtrl.record('Comment', value);
-          };
-
-          scope.buttonHoverState = false;
-          scope.buttonClass      = scope.buttonHoverState ? 'btn-primary' : 'btn-primary-outline';
-        }
-      }
-    }]);
-}(angular));
-
-(function(angular) {
-  'use strict';
-
-  /**
-   * @ngdoc function
-   * @author seancannon
-   * @name narvar.directive.feedbackComplete
-   * @description
-   * # feedbackComplete
-   * General feedback complete
-   */
-  angular.module('narvar').directive('feedbackComplete', ['R',
-    function(R) {
-      return {
-        restrict : 'E',
-        require  : '^surveyWidget',
-        scope    : {
-          caption    : '@',
-          subtext    : '@',
-          buttonText : '@',
-          buttonHref : '@'
-        },
-        templateUrl : 'widgets/survey/templates/feedback-complete.html',
-        link        : function(scope, element, attrs, surveyWidgetCtrl) {
-          scope.buttonHoverState = false;
-          scope.buttonClass      = scope.buttonHoverState ? 'btn-primary' : 'btn-primary-outline';
-        }
-      }
-    }]);
-}(angular));
-
-(function(angular) {
-
-  'use strict';
-
-  /**
-   * @ngdoc function
-   * @author seancannon
-   * @name narvar.directive.feedbackStars
-   * @description
-   * # feedbackStars
-   * Overall rating for the delivery.
-   */
-  angular.module('narvar').directive('feedbackStars', ['R',
-    function(R) {
-
-      var title = 'How was your delivery?';
-
-      return {
-        restrict : 'E',
-        require  : '^surveyWidget',
-        scope    : {
-          caption    : '@',
-          adjectives : '='
-        },
-        templateUrl : 'widgets/survey/templates/feedback-stars.html',
-        link        : function(scope, element, attrs, surveyWidgetCtrl) {
-
-          /**
-           * Set the caption to one of the hovered stars adjective strings.
-           * @param {Number} index
-           */
-          scope.setCaptionFromAdjectivesIndex = function(index) {
-            scope.caption = scope.adjectives[index];
-          };
-
-          /**
-           * Reset the caption to the default title.
-           */
-          scope.resetCaption = function() {
-            scope.caption = title;
-          };
-
-          /**
-           * Record the value from the customer.
-           * @param {Number} value
-           */
-          scope.record = function(value) {
-            surveyWidgetCtrl.record('Stars rating', value);
-          };
-
-          scope.hoverIndex = -1;
-          scope.title      = scope.caption;
-        }
-      }
-    }]);
-}(angular));
-
-(function(angular) {
-
-  'use strict';
-
-  /**
-   * @ngdoc function
-   * @author seancannon
-   * @name narvar.directive.feedbackTiming
-   * @description
-   * # feedbackTiming
-   * Feedback for delivery promptness.
-   */
-  angular.module('narvar').directive('feedbackTiming', ['R',
-    function(R) {
-      return {
-        restrict : 'E',
-        require  : '^surveyWidget',
-        scope    : {
-          caption    : '@',
-          adjectives : '='
-        },
-        templateUrl : 'widgets/survey/templates/feedback-timing.html',
-        link        : function(scope, element, attrs, surveyWidgetCtrl) {
-
-          /**
-           * Set the hover state of the button.
-           * @param {Boolean} state
-           */
-          scope.setButtonHoverState = function(state) {
-            scope.buttonHoverState = state;
-          };
-
-          /**
-           * Record the value from the customer.
-           * @param {Number} value
-           */
-          scope.record = function(value) {
-            surveyWidgetCtrl.record('Timing rating', value);
-          };
-
-          scope.buttonHoverState = false;
-          scope.buttonClass      = scope.buttonHoverState ? 'btn-primary' : 'btn-primary-outline';
-
-        }
-      }
-    }]);
-}(angular));
-
-(function(angular) {
-  'use strict';
-
-  /**
-   * @ngdoc function
-   * @author seancannon
-   * @name narvar.directive.surveyWidget
-   * @description
-   * # surveyWidget
+   * # trackingStatusWidget
    * Displays tracking information
    */
-  angular.module('narvar').directive('surveyWidget', ['R',
-    function(R) {
+  angular.module('narvar').directive('trackingStatusWidget', ['R', 'TrackingSvc',
+    function(R, TrackingSvc) {
+
+      console.log('R = ', window.R);
       return {
         restrict    : 'E',
-        scope       : {
-          steps : '@'
-        },
-        controller  : function() {
-          this.currentStep = 1;
+        scope       : {},
+        templateUrl : 'widgets/trackingStatus/templates/tracking-status-widget.html',
+        link        : function(scope, element, attrs) {
+          scope.status = 'Fetching status...';
+          scope.img    = '/assets/images/processing.svg';
 
-          this.nextStep = function() {
-            this.currentStep += 1;
-            return this;
-          };
-
-          this.record = function(type, value) {
-            // TODO remove console log statement and POST
-            console.log(type + ': ' + value);
-            return this.nextStep();
-          };
-        },
-        controllerAs : 'surveyWidgetCtrl',
-        templateUrl  : 'widgets/survey/templates/survey-widget.html',
-        link         : function(scope, element, attrs) {}
+          TrackingSvc.resources.tracking.get(function(response) {
+            var status = R.path(['tracking', 'status'], response);
+            scope.status = status;
+            scope.img    = '/assets/images/' + R.toLower(status) + '.svg';
+          });
+        }
       }
     }]);
 }(angular));
@@ -1099,29 +918,209 @@ angular.module('narvar').directive('modal', ['$window', '$timeout',
   /**
    * @ngdoc function
    * @author seancannon
-   * @name narvar.directive.trackingStatusWidget
+   * @name narvar.directive.feedbackComment
    * @description
-   * # trackingStatusWidget
+   * # feedbackComment
+   * General feedback comment
+   */
+  angular.module('narvar').directive('feedbackComment', ['R',
+    function(R) {
+      return {
+        restrict : 'E',
+        require  : '^surveyWidget',
+        scope    : {
+          caption         : '@',
+          placeholderText : '@'
+        },
+        templateUrl : 'widgets/survey/templates/feedback-comment.html',
+        link        : function(scope, element, attrs, surveyWidgetCtrl) {
+
+          /**
+           * Record the value from the customer.
+           * @param {Number} value
+           */
+          scope.record = function(value) {
+            surveyWidgetCtrl.record('Comment', value);
+          };
+
+          scope.buttonHoverState = false;
+          scope.buttonClass      = scope.buttonHoverState ? 'btn-primary' : 'btn-primary-outline';
+        }
+      }
+    }]);
+}(angular));
+
+(function(angular) {
+  'use strict';
+
+  /**
+   * @ngdoc function
+   * @author seancannon
+   * @name narvar.directive.feedbackComplete
+   * @description
+   * # feedbackComplete
+   * General feedback complete
+   */
+  angular.module('narvar').directive('feedbackComplete', ['R',
+    function(R) {
+      return {
+        restrict : 'E',
+        require  : '^surveyWidget',
+        scope    : {
+          caption    : '@',
+          subtext    : '@',
+          buttonText : '@',
+          buttonHref : '@'
+        },
+        templateUrl : 'widgets/survey/templates/feedback-complete.html',
+        link        : function(scope, element, attrs, surveyWidgetCtrl) {
+          scope.buttonHoverState = false;
+          scope.buttonClass      = scope.buttonHoverState ? 'btn-primary' : 'btn-primary-outline';
+        }
+      }
+    }]);
+}(angular));
+
+(function(angular) {
+
+  'use strict';
+
+  /**
+   * @ngdoc function
+   * @author seancannon
+   * @name narvar.directive.feedbackStars
+   * @description
+   * # feedbackStars
+   * Overall rating for the delivery.
+   */
+  angular.module('narvar').directive('feedbackStars', ['R',
+    function(R) {
+
+      var title = 'How was your delivery?';
+
+      return {
+        restrict : 'E',
+        require  : '^surveyWidget',
+        scope    : {
+          caption    : '@',
+          adjectives : '='
+        },
+        templateUrl : 'widgets/survey/templates/feedback-stars.html',
+        link        : function(scope, element, attrs, surveyWidgetCtrl) {
+
+          /**
+           * Set the caption to one of the hovered stars adjective strings.
+           * @param {Number} index
+           */
+          scope.setCaptionFromAdjectivesIndex = function(index) {
+            scope.caption = scope.adjectives[index];
+          };
+
+          /**
+           * Reset the caption to the default title.
+           */
+          scope.resetCaption = function() {
+            scope.caption = title;
+          };
+
+          /**
+           * Record the value from the customer.
+           * @param {Number} value
+           */
+          scope.record = function(value) {
+            surveyWidgetCtrl.record('Stars rating', value);
+          };
+
+          scope.hoverIndex = -1;
+          scope.title      = scope.caption;
+        }
+      }
+    }]);
+}(angular));
+
+(function(angular) {
+
+  'use strict';
+
+  /**
+   * @ngdoc function
+   * @author seancannon
+   * @name narvar.directive.feedbackTiming
+   * @description
+   * # feedbackTiming
+   * Feedback for delivery promptness.
+   */
+  angular.module('narvar').directive('feedbackTiming', ['R',
+    function(R) {
+      return {
+        restrict : 'E',
+        require  : '^surveyWidget',
+        scope    : {
+          caption    : '@',
+          adjectives : '='
+        },
+        templateUrl : 'widgets/survey/templates/feedback-timing.html',
+        link        : function(scope, element, attrs, surveyWidgetCtrl) {
+
+          /**
+           * Set the hover state of the button.
+           * @param {Boolean} state
+           */
+          scope.setButtonHoverState = function(state) {
+            scope.buttonHoverState = state;
+          };
+
+          /**
+           * Record the value from the customer.
+           * @param {Number} value
+           */
+          scope.record = function(value) {
+            surveyWidgetCtrl.record('Timing rating', value);
+          };
+
+          scope.buttonHoverState = false;
+          scope.buttonClass      = scope.buttonHoverState ? 'btn-primary' : 'btn-primary-outline';
+
+        }
+      }
+    }]);
+}(angular));
+
+(function(angular) {
+  'use strict';
+
+  /**
+   * @ngdoc function
+   * @author seancannon
+   * @name narvar.directive.surveyWidget
+   * @description
+   * # surveyWidget
    * Displays tracking information
    */
-  angular.module('narvar').directive('trackingStatusWidget', ['R', 'TrackingSvc',
-    function(R, TrackingSvc) {
-
-      console.log('R = ', window.R);
+  angular.module('narvar').directive('surveyWidget', ['R',
+    function(R) {
       return {
         restrict    : 'E',
-        scope       : {},
-        templateUrl : 'widgets/trackingStatus/templates/tracking-status-widget.html',
-        link        : function(scope, element, attrs) {
-          scope.status = 'Fetching status...';
-          scope.img    = '/assets/images/processing.svg';
+        scope       : {
+          steps : '@'
+        },
+        controller  : function() {
+          this.currentStep = 1;
 
-          TrackingSvc.resources.tracking.get(function(response) {
-            var status = R.path(['tracking', 'status'], response);
-            scope.status = status;
-            scope.img    = '/assets/images/' + R.toLower(status) + '.svg';
-          });
-        }
+          this.nextStep = function() {
+            this.currentStep += 1;
+            return this;
+          };
+
+          this.record = function(type, value) {
+            // TODO remove console log statement and POST
+            console.log(type + ': ' + value);
+            return this.nextStep();
+          };
+        },
+        controllerAs : 'surveyWidgetCtrl',
+        templateUrl  : 'widgets/survey/templates/survey-widget.html',
+        link         : function(scope, element, attrs) {}
       }
     }]);
 }(angular));

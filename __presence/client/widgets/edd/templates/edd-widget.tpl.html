@@ -1,0 +1,24 @@
+<div class="edd-container">
+  <div class="edd-message" ng-class="{'edd-show-message' : deliveryStatusMessage}">{{deliveryStatusMessage}}</div>
+  <div class="edd-view" ng-class="{'edd-show-message' : deliveryStatusMessage}">
+    <div class="edd-date-container edd-left" ng-class="{'edd-single-date' : isSingleDate}">
+      <div class="edd-day">{{estimatedDeliveryRangeStartDay}}</div>
+      <div class="edd-month">{{estimatedDeliveryRangeStartMonthName}}</div>
+      <div class="edd-date">{{estimatedDeliveryRangeStartDate}}</div>
+    </div>
+    <div class="edd-range-separator" ng-class="{'edd-single-date' : isSingleDate}"></div>
+    <div class="edd-date-container edd-right" ng-class="{'edd-single-date' : isSingleDate}">
+      <div class="edd-day">{{estimatedDeliveryRangeEndDay}}</div>
+      <div class="edd-month">{{estimatedDeliveryRangeEndMonthName}}</div>
+      <div class="edd-date">{{estimatedDeliveryRangeEndDate}}</div>
+    </div>
+  </div>
+  <div class="edd-days-remaining" ng-class="{'edd-delivered' : isDelivered}">{{daysRemainingText}}</div>
+  <div class="edd-where-is-my-package" ng-class="{'edd-delivered' : isDelivered}">
+    <span data-advid="{{dataAdvIdPackage}}" class="banner_ad_link" data-href="{{customerCareUrl}}" ng-click="handleBannerAdLinkClick()">{{whereIsMyPackageClickText}}</span>
+    <div class="edd-where-is-my-package-tooltip">
+      <span class="edd-where-is-my-package-message">{{whereIsMyPackageMessage}}</span>
+      <a target="_blank" data-advid="{{dataAdvIdPackage}}" class="banner_ad_link" href="">{{contactInfoClickText}}</a>.
+    </div>
+  </div>
+</div>

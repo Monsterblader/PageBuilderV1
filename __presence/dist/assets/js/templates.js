@@ -5,69 +5,31 @@ try {
   module = angular.module('templates-app', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/footer/templates/footer-widget.html',
-    '<div class="container">\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-xs-6">\n' +
-    '      <p class="pull-left">\n' +
-    '        <a href="http://corp.narvar.com/" target="_blank">\n' +
-    '          <img src="/assets/images/narvar_logo.svg">\n' +
-    '        </a>\n' +
-    '      </p>\n' +
+  $templateCache.put('widgets/edd/templates/edd-widget.html',
+    '<div class="edd-container">\n' +
+    '  <div class="edd-message" ng-class="{\'edd-show-message\' : deliveryStatusMessage}">{{deliveryStatusMessage}}</div>\n' +
+    '  <div class="edd-view" ng-class="{\'edd-show-message\' : deliveryStatusMessage}">\n' +
+    '    <div class="edd-date-container edd-left" ng-class="{\'edd-single-date\' : isSingleDate}">\n' +
+    '      <div class="edd-day">{{estimatedDeliveryRangeStartDay}}</div>\n' +
+    '      <div class="edd-month">{{estimatedDeliveryRangeStartMonthName}}</div>\n' +
+    '      <div class="edd-date">{{estimatedDeliveryRangeStartDate}}</div>\n' +
     '    </div>\n' +
-    '    <div class="col-xs-6">\n' +
-    '      <p class="pull-right">\n' +
-    '        <a href="http://corp.narvar.com/terms/" target="_blank">Terms of Use</a> |\n' +
-    '        <a href="http://corp.narvar.com/terms/" target="_blank">Privacy Policy</a>\n' +
-    '      </p>\n' +
+    '    <div class="edd-range-separator" ng-class="{\'edd-single-date\' : isSingleDate}"></div>\n' +
+    '    <div class="edd-date-container edd-right" ng-class="{\'edd-single-date\' : isSingleDate}">\n' +
+    '      <div class="edd-day">{{estimatedDeliveryRangeEndDay}}</div>\n' +
+    '      <div class="edd-month">{{estimatedDeliveryRangeEndMonthName}}</div>\n' +
+    '      <div class="edd-date">{{estimatedDeliveryRangeEndDate}}</div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '  <div class="edd-days-remaining" ng-class="{\'edd-delivered\' : isDelivered}">{{daysRemainingText}}</div>\n' +
+    '  <div class="edd-where-is-my-package" ng-class="{\'edd-delivered\' : isDelivered}">\n' +
+    '    <span data-advid="{{dataAdvIdPackage}}" class="banner_ad_link" data-href="{{customerCareUrl}}" ng-click="handleBannerAdLinkClick()">{{whereIsMyPackageClickText}}</span>\n' +
+    '    <div class="edd-where-is-my-package-tooltip">\n' +
+    '      <span class="edd-where-is-my-package-message">{{whereIsMyPackageMessage}}</span>\n' +
+    '      <a target="_blank" data-advid="{{dataAdvIdPackage}}" class="banner_ad_link" href="">{{contactInfoClickText}}</a>.\n' +
     '    </div>\n' +
     '  </div>\n' +
     '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/sms/templates/sms-widget.html',
-    '<h4 class="sms-header">Stay Informed</h4>\n' +
-    '<p class="sms-body-text">SMS tracking notifications</p>\n' +
-    '<div><p class="sms-response-msg">{{responseMessage}}</p></div>\n' +
-    '\n' +
-    '<div id="sms-widget">\n' +
-    '  <div class="sms-icon">\n' +
-    '    <img class="banner-ad-img" src="/images/sms-icon_1x.png" data-src@2x="/images/sms-icon_2x.png"/>\n' +
-    '  </div>\n' +
-    '  <input id="sms-input" type="tel" name="sms-phone" class="sms-input pull-left" placeholder="{{placeholderPhone}}" />\n' +
-    '  <span>- or -</span>\n' +
-    '  <input pattern="[^@]+@[^@]+\\.[a-zA-Z]{2,6}" type="email" name="m-email" class="input-medium" placeholder="{{placeholderEmail}}" />\n' +
-    '  <a href="#" class="sms-widget-btn pull-right" id="sms-signup">Sign Up</a>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/header/templates/header-widget.html',
-    '<h1>HEADER</h1>\n' +
-    '<nav class="navbar" ng-class="{\'navbar-fixed-top\':fixed}">\n' +
-    '  <a class="navbar-brand navbar-brand-{{align}}" href="{{link}}" alt="{{text}}">\n' +
-    '    <span ng-if="img === undefined">{{text}}</span>\n' +
-    '    <span class="hiddentext" ng-if="img !== undefined">{{text}}</span>\n' +
-    '    <img ng-src="{{img}}" ng-if="img !== undefined">\n' +
-    '  </a>\n' +
-    '</nav>\n' +
     '');
 }]);
 })();
@@ -109,6 +71,93 @@ module.run(['$templateCache', function($templateCache) {
     '        </div>\n' +
     '      </div>\n' +
     '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/footer/templates/footer-widget.html',
+    '<div class="container">\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-xs-6">\n' +
+    '      <p class="pull-left">\n' +
+    '        <a href="http://corp.narvar.com/" target="_blank">\n' +
+    '          <img src="/assets/images/narvar_logo.svg">\n' +
+    '        </a>\n' +
+    '      </p>\n' +
+    '    </div>\n' +
+    '    <div class="col-xs-6">\n' +
+    '      <p class="pull-right">\n' +
+    '        <a href="http://corp.narvar.com/terms/" target="_blank">Terms of Use</a> |\n' +
+    '        <a href="http://corp.narvar.com/terms/" target="_blank">Privacy Policy</a>\n' +
+    '      </p>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/header/templates/header-widget.html',
+    '<h1>HEADER</h1>\n' +
+    '<nav class="navbar" ng-class="{\'navbar-fixed-top\':fixed}">\n' +
+    '  <a class="navbar-brand navbar-brand-{{align}}" href="{{link}}" alt="{{text}}">\n' +
+    '    <span ng-if="img === undefined">{{text}}</span>\n' +
+    '    <span class="hiddentext" ng-if="img !== undefined">{{text}}</span>\n' +
+    '    <img ng-src="{{img}}" ng-if="img !== undefined">\n' +
+    '  </a>\n' +
+    '</nav>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/sms/templates/sms-widget.html',
+    '<h4 class="sms-header">Stay Informed</h4>\n' +
+    '<p class="sms-body-text">SMS tracking notifications</p>\n' +
+    '<div><p class="sms-response-msg">{{responseMessage}}</p></div>\n' +
+    '\n' +
+    '<div id="sms-widget">\n' +
+    '  <div class="sms-icon">\n' +
+    '    <img class="banner-ad-img" src="/images/sms-icon_1x.png" data-src@2x="/images/sms-icon_2x.png"/>\n' +
+    '  </div>\n' +
+    '  <input id="sms-input" type="tel" name="sms-phone" class="sms-input pull-left" placeholder="{{placeholderPhone}}" />\n' +
+    '  <span>- or -</span>\n' +
+    '  <input pattern="[^@]+@[^@]+\\.[a-zA-Z]{2,6}" type="email" name="m-email" class="input-medium" placeholder="{{placeholderEmail}}" />\n' +
+    '  <a href="#" class="sms-widget-btn pull-right" id="sms-signup">Sign Up</a>\n' +
+    '</div>\n' +
+    '\n' +
+    '<div id="sms-widget-checkbox" class="sms-widget-opt-in pull-right" ng-if="enableCheckbox">\n' +
+    '  <div class="sms-widget-checkbox-container" style="width:10%;">\n' +
+    '    <div class="sms-widget-checkbox pull-left">\n' +
+    '      <input type="checkbox" value="none" id="sms-checkbox" name="sms-checkbox" class="sms-input-check"/>\n' +
+    '      <label for="sms-checkbox"></label>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '  <div class="sms-widget-opt-in-info pull-right" style="width:90%;">\n' +
+    '    <p>${lg.sms_opt_in_body_text!}</p>\n' +
+    '    <a href="${lg.sms_opt_in_policy_url!}" target="_blank">${lg.sms_opt_in_policy_label!}</a>\n' +
     '  </div>\n' +
     '</div>\n' +
     '');

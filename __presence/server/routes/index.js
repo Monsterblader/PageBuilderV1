@@ -12,7 +12,24 @@ router.get('/', indexCtrl);
 router.get('/api/v0.0.0/tracking', function(req, res) {
   res.json({
     tracking : {
-      status : 'In-Transit'
+      status             : 'In-Transit',
+      estimated_delivery : {
+        range_start : {
+          date  : 25,
+          month : 11,
+          year  : 2015,
+          day   : 'Friday'
+        },
+        range_end   : {
+          date  : 31,
+          month : 11,
+          year  : 2015,
+          day   : 'Thursday'
+        }
+      },
+      delivery           : {
+        status : 'ON_ITS_WAY'
+      }
     }
   });
 });

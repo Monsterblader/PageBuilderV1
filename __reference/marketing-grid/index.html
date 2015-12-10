@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Marketing Ads</title>
+
+	
+<style>
+	.marketing-grid {
+		display: flex;
+	}
+	.marketing-ads {
+		list-style: none;
+	}
+	.marketing-ads li {
+		display: list-item;
+		float: left;
+		margin: 0 10px 10px 0;
+	}
+	.marketing-ads li a {
+		
+	}
+	.marketing-ads li img {
+		
+	}
+
+</style>
+</head>
+<body>
+<div class="container" style="max-width:940px">
+<div class="marketing-grid">
+ 	<ul class="marketing-ads">
+	</ul>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="retailer.js"></script>
+<script type="text/javascript">
+jQuery(function(){
+	
+var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+var highRes = false;
+var container = $('.marketing-grid');	
+var images = data.marketing_ads.ads;
+
+	
+if (window.devicePixelRatio >= 2 || screen.height >= 2000) highRes = true;
+if (mobile){
+	container.addClass('mobile-grid');
+};
+var device = (mobile? device = 'mobile' : device = 'desktop');
+
+
+for (var i = 0; i < images.length; i++) {
+  	 var item = images[i];
+  	 var desktopSrc2x = item.desktop_src_2x;	 
+	 var desktopSrc = item.desktop_src;
+	 var mobileSrc2x = item.mobile_src_2x;
+	 var mobileSrc = item.mobile_src;
+	 var imgSrc2x = (mobile? imsSrc2x = mobileSrc2x : imgSrc2x = desktopSrc2x);
+	 var imgSrc = (mobile? imsSrc = mobileSrc : imgSrc = desktopSrc);
+	 
+	 var imgSrc = (highRes? imsSrc = imgSrc2x : imgSrc = imgSrc);
+ 
+     var newImage = '<li class="image-item sort-' + item.sort_order+ '"><a data-advid="'+ item.data_advid +'" href="' + item.target_url + '" target="_blank"><img src="' + imgSrc + '"/ alt="' + item.alt_text + '"></a></li>';
+     $('.marketing-ads').append(newImage);
+}
+
+});
+</script>
+</body>
+</html>

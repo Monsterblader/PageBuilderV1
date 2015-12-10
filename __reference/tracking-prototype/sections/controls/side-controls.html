@@ -1,0 +1,154 @@
+<h1>CONTENT OPTIONS</h1>
+<div id="content-options">
+    <div id="page-layout">
+        <h2>PAGE LAYOUT<div class="tooltips"/></h2>
+        <div id="layout-dropdown" class="bottom-divider">
+                <select id="dropdown-layout" class="dropdown full-width">
+                    <option value="layout1" selected>Custom Layout</option>
+                    <option value="layout2">Marketing Layout (FPO)</option>
+                    <option value="layout3">Support Layout (FPO)</option>
+                </select>
+        </div>
+        <div id="left-panel-dropdowns" class="bottom-divider optional-options">
+            <h2>LEFT PANEL<div class="tooltips"/></h2>
+            <div class="status-dropdown">
+                <h3>Shipping</h3>
+                <select id="dropdown-left-panel-shipping" class="dropdown">
+                    <option value="calendar" selected>Calendar</option>
+                    <option value="sms" disabled>SMS</option>
+                    <option value="survey">Survey</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="status-dropdown">
+                <h3>Delivered</h3>
+                <select id="dropdown-left-panel-delivered" class="dropdown">
+                    <option value="calendar">Calendar</option>
+                    <option value="survey">Survey</option>
+                    <option value="marketing" selected>Marketing</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="right-panel-dropdowns" class="bottom-divider optional-options">
+        <h2>RIGHT PANEL<div class="tooltips"/></h2>
+            <div class="status-dropdown">
+                <h3>Shipping</h3>
+                <select id="dropdown-right-panel-shipping" class="dropdown">
+                    <option value="sms" disabled>SMS</option>
+                    <option value="survey">Survey</option>
+                    <option value="marketing" selected>Marketing</option>
+                    <option value="faq">FAQ</option>
+                </select>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="status-dropdown">
+                <h3>Delivered</h3>
+                <select id="dropdown-right-panel-delivered" class="dropdown">
+                    <option value="survey" disabled>Survey</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="faq" selected>FAQ</option>
+                </select>
+            </div>
+        </div>
+        <div id="skinny-bar-dropdowns" class="optional-options">
+        <h2>SKINNY BAR<div class="tooltips"/></h2>
+            <div class="status-dropdown">
+                <h3>Shipping</h3>
+                <select id="dropdown-skinny-bar-shipping" class="dropdown">
+                    <option value="sms" selected>SMS</option>
+                    <option value="survey">Survey</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="status-dropdown">
+                <h3>Delivered</h3>
+                <select id="dropdown-skinny-bar-delivered" class="dropdown">
+                    <option value="survey" selected>Survey</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-divider"></div>
+    <div id="marketing-grid-slider">
+        <h2>MARKETING GRID<div class="tooltips"/></h2>
+        <input type="range" name="test" id="marketing-grid-range" value="" min="0" max="3" step="1" >
+        <ul id="scale-range">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</div>
+<h1>STYLE OPTIONS</h1>
+<div id="style-options">
+    <div id="colors-options" class="bottom-divider">
+        <h2>COLORS<div class="tooltips"/></h2>
+        <h3>Main Color</h3>
+            <div class="swatch-group">
+            <div class="hex">#</div>
+            <input type="text" class="color-picker" id="main-color" placeholder="2C3239" value="2C3239" maxlength="6">
+            <div id="main-color-swatch" class="swatch"></div>
+        </div>
+    <div class="dropdown-divider"></div> 
+        <h3>Accent Color</h3>
+            <div class="swatch-group">
+            <div class="hex">#</div>
+            <input type="text" class="color-picker" id="accent-color" placeholder="F5F5F5" value="F5F5F5" maxlength="6">
+            <div id="accent-color-swatch" class="swatch"></div>
+        </div>
+    <div class="dropdown-divider"></div> 
+        <h3>Header Color</h3>
+            <div class="swatch-group">
+            <div class="hex">#</div>
+            <input type="text" class="color-picker" id="header-color" placeholder="FFFFFF" value="ffffff" maxlength="6">
+            <div id="header-color-swatch" class="swatch"></div>
+        </div>  
+    <div class="dropdown-divider"></div> 
+        <h3>Link Color</h3>
+            <div class="swatch-group">
+            <div class="hex">#</div>
+            <input type="text" class="color-picker" id="link-color" placeholder="F65300" value="F65300" maxlength="6">
+            <div id="link-color-swatch" class="swatch"></div>
+        </div>                              
+    </div>
+
+    <div id="fonts-options">
+        <h2>FONTS<div class="tooltips"/></h2>
+         <div id="colors-dropdown">
+            <div class="status-dropdown">
+                <h3>Base Font</h3>
+                <select id="dropdown-base-font" class="dropdown">
+                    <optgroup label="San Serif">
+                        <option value="helvetica" selected>Helvetica</option>
+                        <option value="arial">Arial</option>
+                    </optgroup>
+                    <optgroup label="Serif">
+                        <option value="timesnewroman">Times New Roman</option>
+                        <option value="georgia">Georgia</option>
+                    </optgroup>  
+                </select>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="status-dropdown">
+                <h3>Accent Font</h3>
+                <select id="dropdown-accent-font" class="dropdown">
+                    <optgroup label="San Serif">
+                        <option value="helvetica">Helvetica</option>
+                        <option value="arial">Arial</option>
+                    </optgroup>
+                    <optgroup label="Serif">
+                        <option value="timesnewroman" selected>Times New Roman</option>
+                        <option value="georgia">Georgia</option>
+                    </optgroup>                
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

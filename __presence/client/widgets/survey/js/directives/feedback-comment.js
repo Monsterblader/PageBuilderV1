@@ -16,8 +16,7 @@
         require  : '^surveyWidget',
         scope    : {
           caption         : '@',
-          placeholderText : '@',
-          adjectives      : '&'
+          placeholderText : '@'
         },
         templateUrl : 'widgets/survey/templates/feedback-comment.html',
         link        : function(scope, element, attrs, surveyWidgetCtrl) {

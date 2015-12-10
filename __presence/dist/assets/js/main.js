@@ -493,6 +493,50 @@ angular.module('narvar').directive('modal', ['$window', '$timeout',
   /**
    * @ngdoc function
    * @author seancannon
+   * @name narvar.directive.smsWidget
+   * @description
+   * # smsWidget
+   * Displays tracking information
+   */
+  angular.module('narvar').directive('smsWidget', ['R', '$location',
+    function(R, $location) {
+      return {
+        restrict    : 'E',
+        scope       : {
+          retailerName      : '@',
+          carrierName       : '@',
+          errorMessage      : '@',
+          successMessage    : '@',
+          messageDelay      : '@',
+          locale            : '@',
+          showSuccessButton : '&',
+          successCallback   : '&',
+          enableCheckbox    : '&'
+        },
+        templateUrl : 'widgets/sms/templates/sms-widget.html',
+        link        : function(scope, element, attrs) {
+
+          var queryString = $location.search();
+
+          console.log('qs = ', queryString);
+
+
+          scope.messageDelay      = parseInt(R.defaultTo(1000, R.prop('messageDelay', scope)), 10);
+          scope.locale            = R.defaultTo('us',  R.prop('locale',            scope));
+          scope.showSuccessButton = R.defaultTo(false, R.prop('showSuccessButton', scope));
+          scope.successCallback   = R.defaultTo(false, R.prop('successCallback',   scope));
+          scope.enableCheckbox    = R.defaultTo(false, R.prop('enableCheckbox',    scope));
+        }
+      }
+    }]);
+}(angular));
+
+(function(angular) {
+  'use strict';
+
+  /**
+   * @ngdoc function
+   * @author seancannon
    * @name narvar.directive.feedbackComment
    * @description
    * # feedbackComment
@@ -505,8 +549,7 @@ angular.module('narvar').directive('modal', ['$window', '$timeout',
         require  : '^surveyWidget',
         scope    : {
           caption         : '@',
-          placeholderText : '@',
-          adjectives      : '&'
+          placeholderText : '@'
         },
         templateUrl : 'widgets/survey/templates/feedback-comment.html',
         link        : function(scope, element, attrs, surveyWidgetCtrl) {
@@ -729,30 +772,6 @@ angular.module('narvar').directive('modal', ['$window', '$timeout',
             scope.status = status;
             scope.img    = '/assets/images/' + R.toLower(status) + '.svg';
           });
-        }
-      }
-    }]);
-}(angular));
-
-(function(angular) {
-  'use strict';
-
-  /**
-   * @ngdoc function
-   * @author seancannon
-   * @name narvar.directive.smsWidget
-   * @description
-   * # smsWidget
-   * Displays tracking information
-   */
-  angular.module('narvar').directive('smsWidget', ['R',
-    function(R) {
-      return {
-        restrict    : 'E',
-        scope       : {},
-        templateUrl : 'widgets/sms/templates/sms-widget.html',
-        link        : function(scope, element, attrs) {
-
         }
       }
     }]);

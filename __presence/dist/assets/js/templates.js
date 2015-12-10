@@ -5,39 +5,48 @@ try {
   module = angular.module('templates-app', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/faq/templates/faq-widget.html',
-    '<div class="row">\n' +
-    '  <div class="col-xs-12" ng-switch on="type">\n' +
-    '    <div id="narvar-faq-slides" class="carousel slide" ng-switch-when="slides">\n' +
-    '      slides...\n' +
-    '      <div class="carousel-indicators-with-controls">\n' +
-    '        <a class="icon-prev" href="#narvar-faq-slides" data-slide="prev"></a>\n' +
-    '        <ol class="carousel-indicators">\n' +
-    '          <li data-target="#narvar-faq-slides" data-slide-to="{{$index}}" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}"></li>\n' +
-    '        </ol>\n' +
-    '        <a class="icon-next" href="#narvar-faq-slides" data-slide="next"></a>\n' +
-    '      </div>\n' +
-    '      <div class="carousel-inner" role="listbox">\n' +
-    '        <div class="carousel-item" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}">\n' +
-    '          <p><strong>{{tab.title}}</strong></p>\n' +
-    '          <p>{{tab.body}}</p>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
+  $templateCache.put('widgets/footer/templates/footer-widget.html',
+    '<div class="container">\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-xs-6">\n' +
+    '      <p class="pull-left">\n' +
+    '        <a href="http://corp.narvar.com/" target="_blank">\n' +
+    '          <img src="/assets/images/narvar_logo.svg">\n' +
+    '        </a>\n' +
+    '      </p>\n' +
     '    </div>\n' +
-    '    <div id="narvar-faq-tabs" role="tablist" ng-switch-default>\n' +
-    '      default...\n' +
-    '      <div class="panel panel-default" ng-repeat="tab in tabs track by $index">\n' +
-    '        <div class="panel-heading" role="tab">\n' +
-    '          <p>\n' +
-    '            <a data-toggle="collapse" data-parent="#narvar-faq-tabs" href="#narvar-faq-tab-{{$index}}"><strong>{{tab.title}}</strong></a>\n' +
-    '          </p>\n' +
-    '        </div>\n' +
-    '        <div id="narvar-faq-tab-{{$index}}" class="panel-collapse collapse" role="tabpanel" ng-class="{\'in\': $index === 0}">\n' +
-    '          {{tab.body}}\n' +
-    '        </div>\n' +
-    '      </div>\n' +
+    '    <div class="col-xs-6">\n' +
+    '      <p class="pull-right">\n' +
+    '        <a href="http://corp.narvar.com/terms/" target="_blank">Terms of Use</a> |\n' +
+    '        <a href="http://corp.narvar.com/terms/" target="_blank">Privacy Policy</a>\n' +
+    '      </p>\n' +
     '    </div>\n' +
     '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/sms/templates/sms-widget.html',
+    '<h4 class="sms-header">Stay Informed</h4>\n' +
+    '<p class="sms-body-text">SMS tracking notifications</p>\n' +
+    '<div><p class="sms-response-msg">{{responseMessage}}</p></div>\n' +
+    '\n' +
+    '<div id="sms-widget">\n' +
+    '  <div class="sms-icon">\n' +
+    '    <img class="banner-ad-img" src="/images/sms-icon_1x.png" data-src@2x="/images/sms-icon_2x.png"/>\n' +
+    '  </div>\n' +
+    '  <input id="sms-input" type="tel" name="sms-phone" class="sms-input pull-left" placeholder="{{placeholderPhone}}" />\n' +
+    '  <span>- or -</span>\n' +
+    '  <input pattern="[^@]+@[^@]+\\.[a-zA-Z]{2,6}" type="email" name="m-email" class="input-medium" placeholder="{{placeholderEmail}}" />\n' +
+    '  <a href="#" class="sms-widget-btn pull-right" id="sms-signup">Sign Up</a>\n' +
     '</div>\n' +
     '');
 }]);
@@ -70,7 +79,38 @@ try {
   module = angular.module('templates-app', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/sms/templates/sms-widget.html',
+  $templateCache.put('widgets/faq/templates/faq-widget.html',
+    '<div class="row">\n' +
+    '  <div class="col-xs-12" ng-switch on="type">\n' +
+    '    <div id="narvar-faq-slides" class="carousel slide" ng-switch-when="slides">\n' +
+    '      <div class="carousel-indicators-with-controls">\n' +
+    '        <a class="icon-prev" href="#narvar-faq-slides" data-slide="prev"></a>\n' +
+    '        <ol class="carousel-indicators">\n' +
+    '          <li data-target="#narvar-faq-slides" data-slide-to="{{$index}}" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}"></li>\n' +
+    '        </ol>\n' +
+    '        <a class="icon-next" href="#narvar-faq-slides" data-slide="next"></a>\n' +
+    '      </div>\n' +
+    '      <div class="carousel-inner" role="listbox">\n' +
+    '        <div class="carousel-item" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}">\n' +
+    '          <p><strong>{{tab.title}}</strong></p>\n' +
+    '          <p>{{tab.body}}</p>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div id="narvar-faq-tabs" role="tablist" ng-switch-default>\n' +
+    '      <div class="panel panel-default" ng-repeat="tab in tabs track by $index">\n' +
+    '        <div class="panel-heading" role="tab">\n' +
+    '          <p>\n' +
+    '            <a data-toggle="collapse" data-parent="#narvar-faq-tabs" href="#narvar-faq-tab-{{$index}}"><strong>{{tab.title}}</strong></a>\n' +
+    '          </p>\n' +
+    '        </div>\n' +
+    '        <div id="narvar-faq-tab-{{$index}}" class="panel-collapse collapse" role="tabpanel" ng-class="{\'in\': $index === 0}">\n' +
+    '          {{tab.body}}\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
     '');
 }]);
 })();
@@ -206,35 +246,6 @@ module.run(['$templateCache', function($templateCache) {
     '      button-text    = "Continue Shopping"\n' +
     '      button-href    = "http://corp.narvar.com/"\n' +
     '  ></feedback-complete>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/footer/templates/footer-widget.html',
-    '<div class="container">\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-xs-6">\n' +
-    '      <p class="pull-left">\n' +
-    '        <a href="http://corp.narvar.com/" target="_blank">\n' +
-    '          <img src="/assets/images/narvar_logo.svg">\n' +
-    '        </a>\n' +
-    '      </p>\n' +
-    '    </div>\n' +
-    '    <div class="col-xs-6">\n' +
-    '      <p class="pull-right">\n' +
-    '        <a href="http://corp.narvar.com/terms/" target="_blank">Terms of Use</a> |\n' +
-    '        <a href="http://corp.narvar.com/terms/" target="_blank">Privacy Policy</a>\n' +
-    '      </p>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
     '</div>\n' +
     '');
 }]);

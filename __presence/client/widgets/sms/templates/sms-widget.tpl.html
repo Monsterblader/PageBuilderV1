@@ -1,0 +1,26 @@
+<h4 class="sms-header">Stay Informed</h4>
+<p class="sms-body-text">SMS tracking notifications</p>
+<div><p class="sms-response-msg">{{responseMessage}}</p></div>
+
+<div id="sms-widget">
+  <div class="sms-icon">
+    <img class="banner-ad-img" src="/images/sms-icon_1x.png" data-src@2x="/images/sms-icon_2x.png"/>
+  </div>
+  <input id="sms-input" type="tel" name="sms-phone" class="sms-input pull-left" placeholder="{{placeholderPhone}}" />
+  <span>- or -</span>
+  <input pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" type="email" name="m-email" class="input-medium" placeholder="{{placeholderEmail}}" />
+  <a href="#" class="sms-widget-btn pull-right" id="sms-signup">Sign Up</a>
+</div>
+
+<div id="sms-widget-checkbox" class="sms-widget-opt-in pull-right" ng-if="enableCheckbox">
+  <div class="sms-widget-checkbox-container" style="width:10%;">
+    <div class="sms-widget-checkbox pull-left">
+      <input type="checkbox" value="none" id="sms-checkbox" name="sms-checkbox" class="sms-input-check"/>
+      <label for="sms-checkbox"></label>
+    </div>
+  </div>
+  <div class="sms-widget-opt-in-info pull-right" style="width:90%;">
+    <p>${lg.sms_opt_in_body_text!}</p>
+    <a href="${lg.sms_opt_in_policy_url!}" target="_blank">${lg.sms_opt_in_policy_label!}</a>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+@import './mixins';
+
+/* Text Align Up */
+@media (min-width: 34em) {
+  .text-center-sm-up {
+    text-align: center;
+  }
+  .text-right-sm-up {
+    text-align: right;
+  }
+  .text-left-sm-up {
+    text-align: left;
+  }
+}
+
+@media (min-width: 48em) {
+  .text-center-md-up {
+    text-align: center;
+  }
+  .text-right-md-up {
+    text-align: right;
+  }
+  .text-left-md-up {
+    text-align: left;
+  }
+}
+
+@media (min-width: 62em) {
+  .text-center-lg-up {
+    text-align: center;
+  }
+  .text-right-lg-up {
+    text-align: right;
+  }
+  .text-left-lg-up {
+    text-align: left;
+  }
+}
+
+@media (min-width: 75em) {
+  .text-center-xl-up {
+    text-align: center;
+  }
+  .text-right-xl-up {
+    text-align: right;
+  }
+  .text-left-xl-up {
+    text-align: left;
+  }
+}
+
+/* Text Align Down */
+@media (max-width: 33.9em) {
+  .text-center-xs-down {
+    text-align: center;
+  }
+  .text-right-xs-down {
+    text-align: right;
+  }
+  .text-left-xs-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 37.9em) {
+  .text-center-sm-down {
+    text-align: center;
+  }
+  .text-right-sm-down {
+    text-align: right;
+  }
+  .text-left-sm-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 41.9em) {
+  .text-center-md-down {
+    text-align: center;
+  }
+  .text-right-md-down {
+    text-align: right;
+  }
+  .text-left-md-down {
+    text-align: left;
+  }
+}
+
+@media (max-width: 74.9em) {
+  .text-center-lg-down {
+    text-align: center;
+  }
+  .text-right-lg-down {
+    text-align: right;
+  }
+  .text-left-lg-down {
+    text-align: left;
+  }
+}
+
+/** Animations **/
+
+/* fadeIn taken from Animate.css */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate-switch.ng-enter {
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.img-responsive {
+  width: 100%;
+}

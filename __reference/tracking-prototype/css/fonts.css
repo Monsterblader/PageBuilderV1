@@ -1,0 +1,51 @@
+@font-face {
+  font-family:'ITCAvantGarde';
+  src: url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-XLt_gdi.eot');
+  src: url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-XLt_gdi.eot?#iefix') format('embedded-opentype'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-XLt_gdi.woff') format('woff'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-XLt_gdi.ttf') format('truetype'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-XLt_gdi.svg#ITCAvantGardeStd-XLt') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'ITCAvantGarde';
+  src: url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bk_gdi.eot');
+  src: url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bk_gdi.eot?#iefix') format('embedded-opentype'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bk_gdi.woff') format('woff'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bk_gdi.ttf') format('truetype'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bk_gdi.svg#ITCAvantGardeStd-Bk') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'ITCAvantGarde';
+  src: url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Md_gdi.eot');
+  src: url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Md_gdi.eot?#iefix') format('embedded-opentype'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Md_gdi.woff') format('woff'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Md_gdi.ttf') format('truetype'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Md_gdi.svg#ITCAvantGardeStd-Md') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'ITCAvantGarde';
+  src: url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bold_gdi.eot');
+  src: url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bold_gdi.woff') format('woff'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bold_gdi.ttf') format('truetype'),
+    url('http://narvar.wpengine.com/wp-content/themes/narvar-wp/fonts/ITCAvantGardeStd/ITCAvantGardeStd-Bold_gdi.svg#ITCAvantGardeStd-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}

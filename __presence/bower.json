@@ -1,0 +1,37 @@
+{
+  "name": "narvar",
+  "version": "1.0.0",
+  "authors": [
+    "Sean Cannon <sean@presencepg.com>"
+  ],
+  "description": "Narvar AngularJS Client",
+  "main": "bower.json",
+  "license": "GNU",
+  "homepage": "http://www.narvar.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec"
+  ],
+  "dependencies": {
+    "angular": "~1.4.x",
+    "angular-animate": "~1.4.x",
+    "angular-cookies": "~1.4.x",
+    "angular-material": "*",
+    "angular-messages": "~1.4.x",
+    "angular-mocks": "~1.4.x",
+    "angular-resource": "~1.4.x",
+    "angular-route": "~1.4.x",
+    "angular-sanitize": "~1.4.x",
+    "bootstrap": "~4.x",
+    "jquery": "~1.11.x",
+    "components-font-awesome": "~4.4.0",
+    "es5-shim": "~3.1.0",
+    "json3": "~3.3.1",
+    "modernizr": "~2.8.3",
+    "ramda": "^0.18.x",
+    "responsiveless": "*",
+    "tether": "~1.1.1"
+  }
+}

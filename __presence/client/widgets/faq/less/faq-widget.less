@@ -1,0 +1,76 @@
+faq-widget {
+
+  display  : block;
+  position : relative;
+
+  border : 1px solid orange;
+
+  .carousel-indicators-with-controls {
+    border : 1px solid red;
+    position     : absolute;
+    bottom       : -20px;
+    left         : 50%;
+    z-index      : 15;
+    width        : 60%;
+    padding-left : 0;
+    margin-left  : -30%;
+    text-align   : center;
+
+    .carousel-indicators {
+      border : 1px solid blue;
+      position     : relative;
+      display      : inline-block;
+      bottom       : auto;
+      left         : auto;
+      z-index      : 0;
+      width        : auto;
+      padding-left : 0;
+      margin-left  : 0;
+      text-align   : center;
+      list-style   : none;
+
+      li {
+        border-color : #000;
+      }
+
+      .active {
+        width            : 10px;
+        height           : 10px;
+        margin           : 1px;
+        background-color : #000;
+      }
+    }
+
+    a {
+      position      : relative;
+      width         : 10px;
+      height        : 10px;
+      display       : inline-block;
+      border        : 0;
+      border-radius : 0;
+      text-indent   : 0;
+      color         : #000;
+
+      &:hover {
+        color : #000;
+      }
+
+      &:before {
+        position  : absolute;
+        top       : -.62em;
+        left      : 0;
+        font-size : 1.5em;
+      }
+
+      .icon-prev:before {
+        content : "\2039";
+      }
+
+      .icon-next:before {
+        content : "\203a";
+      }
+
+    }
+
+  }
+}

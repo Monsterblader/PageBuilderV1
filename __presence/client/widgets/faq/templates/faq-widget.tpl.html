@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-xs-12" ng-switch on="type">
+    <div id="narvar-faq-slides" class="carousel slide" ng-switch-when="slides">
+      slides...
+      <div class="carousel-indicators-with-controls">
+        <a class="icon-prev" href="#narvar-faq-slides" data-slide="prev"></a>
+        <ol class="carousel-indicators">
+          <li data-target="#narvar-faq-slides" data-slide-to="{{$index}}" ng-repeat="tab in tabs track by $index" ng-class="{'active': $index === 0}"></li>
+        </ol>
+        <a class="icon-next" href="#narvar-faq-slides" data-slide="next"></a>
+      </div>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item" ng-repeat="tab in tabs track by $index" ng-class="{'active': $index === 0}">
+          <p><strong>{{tab.title}}</strong></p>
+          <p>{{tab.body}}</p>
+        </div>
+      </div>
+    </div>
+    <div id="narvar-faq-tabs" role="tablist" ng-switch-default>
+      default...
+      <div class="panel panel-default" ng-repeat="tab in tabs track by $index">
+        <div class="panel-heading" role="tab">
+          <p>
+            <a data-toggle="collapse" data-parent="#narvar-faq-tabs" href="#narvar-faq-tab-{{$index}}"><strong>{{tab.title}}</strong></a>
+          </p>
+        </div>
+        <div id="narvar-faq-tab-{{$index}}" class="panel-collapse collapse" role="tabpanel" ng-class="{'in': $index === 0}">
+          {{tab.body}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

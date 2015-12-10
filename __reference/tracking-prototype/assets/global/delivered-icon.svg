@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>delivered-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="delivered-icon" sketch:type="MSArtboardGroup">
+            <g id="Rectangle-11-Copy-+-Imported-Layers-2-Copy-2-Copy-Copy" sketch:type="MSLayerGroup">
+                <rect id="Rectangle-11-Copy" sketch:type="MSShapeGroup" x="0" y="0" width="40" height="40"></rect>
+                <g id="Imported-Layers-2-Copy-2" transform="translate(4.000000, 6.000000)" sketch:type="MSShapeGroup">
+                    <path d="M6.61478731,2.6301664 L17.8197832,7.57599252 L17.401603,8.51812091 L6.19590896,3.57229479 L6.61478731,2.6301664" id="Fill-1" opacity="0.400000006" fill="#FFFFFF"></path>
+                    <path d="M11.9331461,26.1388442 L0.0390953129,21.2946065 L0.0390953129,5.11003757 L11.9331461,0.265104073 L23.8264988,5.67712372 L23.8264988,13.7179181 L22.7925674,13.7179181 L22.7925674,6.29569989 L11.9331461,1.39927636 L1.07302671,5.83159381 L1.07302671,20.5730502 L11.9331461,25.0053677 L16.535223,23.3555993 L16.8451929,24.3353015 L11.9331461,26.1388442" id="Fill-2" opacity="0.400000006" fill="#FFFFFF"></path>
+                    <path d="M0.744207206,4.99035804 L12.135604,9.6342021 L11.7439527,10.5881593 L0.353254077,5.94431522 L0.744207206,4.99035804" id="Fill-3" opacity="0.400000006" fill="#FFFFFF"></path>
+                    <path d="M12.4497628,25.5724538 L11.4158314,25.5724538 L11.4158314,9.74901095 L23.1541991,5.52265363 L23.4648672,6.45016998 L12.4497628,10.4705672 L12.4497628,25.5724538" id="Fill-4" opacity="0.400000006" fill="#FFFFFF"></path>
+                    <path d="M16.5875828,20.9334804 C16.5875828,24.6449375 19.5867518,27.6341425 23.3098822,27.6341425 C27.0337107,27.6341425 30.0328797,24.6449375 30.0328797,20.9334804 C30.0328797,17.2227192 27.0337107,14.2335142 23.3098822,14.2335142 C19.5867518,14.2335142 16.5875828,17.2227192 16.5875828,20.9334804 Z" id="Fill-5" opacity="0.400000006" fill="#FFFFFF"></path>
+                    <path d="M19.8450601,21.2946065 L20.5690215,20.5730502 L22.533561,22.531063 L26.5680576,18.5113616 L27.292019,19.2329178 L22.533561,23.9748713 L19.8450601,21.2946065 Z" id="Fill-6" fill="#292F30"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

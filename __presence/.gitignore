@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+_assets
+bower_components
+node_modules
+coverage

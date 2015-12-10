@@ -1,0 +1,32 @@
+<div class="row" ng-switch on="surveyWidgetCtrl.currentStep">
+
+  <feedback-stars
+      class          = "animate-switch"
+      ng-switch-when = "1"
+      caption        = "How was your delivery?"
+      adjectives     = "['Terrible','Bad','Ok','Good','Excellent']"
+  ></feedback-stars>
+
+  <feedback-timing
+      class          = "animate-switch"
+      ng-switch-when = "2"
+      caption        = "When did your items arrive?"
+      adjectives     = "['Early','On time','Late']"
+  ></feedback-timing>
+
+  <feedback-comment
+      class            = "animate-switch"
+      ng-switch-when   = "3"
+      caption          = "Please, tell us more."
+      placeholder-text = "Write your comment here..."
+  ></feedback-comment>
+
+  <feedback-complete
+      class          = "animate-switch"
+      ng-switch-when = "4"
+      caption        = "Thank you!"
+      subtext        = "Your feedback helps us improve."
+      button-text    = "Continue Shopping"
+      button-href    = "http://corp.narvar.com/"
+  ></feedback-complete>
+</div>

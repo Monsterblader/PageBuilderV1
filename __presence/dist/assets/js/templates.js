@@ -90,31 +90,86 @@ try {
   module = angular.module('templates-app', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/sms/templates/sms-widget.html',
-    '<h4 class="sms-header">Stay Informed</h4>\n' +
-    '<p class="sms-body-text">SMS tracking notifications</p>\n' +
-    '<div><p class="sms-response-msg">{{responseMessage}}</p></div>\n' +
-    '\n' +
-    '<div id="sms-widget">\n' +
-    '  <div class="sms-icon">\n' +
-    '    <img class="banner-ad-img" src="/images/sms-icon_1x.png" data-src@2x="/images/sms-icon_2x.png"/>\n' +
-    '  </div>\n' +
-    '  <input id="sms-input" type="tel" name="sms-phone" class="sms-input pull-left" placeholder="{{placeholderPhone}}" />\n' +
-    '  <span>- or -</span>\n' +
-    '  <input pattern="[^@]+@[^@]+\\.[a-zA-Z]{2,6}" type="email" name="m-email" class="input-medium" placeholder="{{placeholderEmail}}" />\n' +
-    '  <a href="#" class="sms-widget-btn pull-right" id="sms-signup">Sign Up</a>\n' +
-    '</div>\n' +
-    '\n' +
-    '<div id="sms-widget-checkbox" class="sms-widget-opt-in pull-right" ng-if="enableCheckbox">\n' +
-    '  <div class="sms-widget-checkbox-container" style="width:10%;">\n' +
-    '    <div class="sms-widget-checkbox pull-left">\n' +
-    '      <input type="checkbox" value="none" id="sms-checkbox" name="sms-checkbox" class="sms-input-check"/>\n' +
-    '      <label for="sms-checkbox"></label>\n' +
+  $templateCache.put('widgets/faq/templates/faq-widget.html',
+    '<div class="row">\n' +
+    '  <div class="col-xs-12" ng-switch on="type">\n' +
+    '    <div id="narvar-faq-slides" class="carousel slide" ng-switch-when="slides">\n' +
+    '      <div class="carousel-indicators-with-controls">\n' +
+    '        <a class="icon-prev" href="#narvar-faq-slides" data-slide="prev"></a>\n' +
+    '        <ol class="carousel-indicators">\n' +
+    '          <li data-target="#narvar-faq-slides" data-slide-to="{{$index}}" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}"></li>\n' +
+    '        </ol>\n' +
+    '        <a class="icon-next" href="#narvar-faq-slides" data-slide="next"></a>\n' +
+    '      </div>\n' +
+    '      <div class="carousel-inner" role="listbox">\n' +
+    '        <div class="carousel-item" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}">\n' +
+    '          <p><strong>{{tab.title}}</strong></p>\n' +
+    '          <p>{{tab.body}}</p>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div id="narvar-faq-tabs" role="tablist" ng-switch-default>\n' +
+    '      <div class="panel panel-default" ng-repeat="tab in tabs track by $index">\n' +
+    '        <div class="panel-heading" role="tab">\n' +
+    '          <p>\n' +
+    '            <a data-toggle="collapse" data-parent="#narvar-faq-tabs" href="#narvar-faq-tab-{{$index}}"><strong>{{tab.title}}</strong></a>\n' +
+    '          </p>\n' +
+    '        </div>\n' +
+    '        <div id="narvar-faq-tab-{{$index}}" class="panel-collapse collapse" role="tabpanel" ng-class="{\'in\': $index === 0}">\n' +
+    '          {{tab.body}}\n' +
+    '        </div>\n' +
+    '      </div>\n' +
     '    </div>\n' +
     '  </div>\n' +
-    '  <div class="sms-widget-opt-in-info pull-right" style="width:90%;">\n' +
-    '    <p>${lg.sms_opt_in_body_text!}</p>\n' +
-    '    <a href="${lg.sms_opt_in_policy_url!}" target="_blank">${lg.sms_opt_in_policy_label!}</a>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/header/templates/header-widget.html',
+    '<h1>HEADER</h1>\n' +
+    '<nav class="navbar" ng-class="{\'navbar-fixed-top\':fixed}">\n' +
+    '  <a class="navbar-brand navbar-brand-{{align}}" href="{{link}}" alt="{{text}}">\n' +
+    '    <span ng-if="img === undefined">{{text}}</span>\n' +
+    '    <span class="hiddentext" ng-if="img !== undefined">{{text}}</span>\n' +
+    '    <img ng-src="{{img}}" ng-if="img !== undefined">\n' +
+    '  </a>\n' +
+    '</nav>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/sms/templates/sms-widget.html',
+    '<div id="sms-widget" class="container">\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-xs-6 col-xs-offset-3 col-sm-1 col-md-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">\n' +
+    '      <div class="sms-icon">\n' +
+    '        <img class="banner-ad-img" src="/assets/images/sms-icon_1x.png" data-src@2x="images/sms-icon_2x.png"/>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-md-6 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">\n' +
+    '      <h4 class="sms-header">Get Text Updates</h4>\n' +
+    '      <p class="sms-body-text">Know when your package is on the way, about to arrive, and gets delivered.</p>\n' +
+    '      <div ng-if="responseMessage"><p class="sms-response-msg">{{responseMessage}}</p></div>\n' +
+    '    </div>\n' +
+    '    <div class="col-xs-12 col-sm-4 col-md-5 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">\n' +
+    '      <input class="col-xs-12 col-md-12 sms-input" id="sms-input" type="tel" name="sms-phone" placeholder="{{placeholderPhone}}" />\n' +
+    '      <a href="#" class="sms-widget-btn pull-right" id="sms-signup">Sign Up</a>\n' +
+    '    </div>\n' +
     '  </div>\n' +
     '</div>\n' +
     '');
@@ -269,69 +324,6 @@ module.run(['$templateCache', function($templateCache) {
     '  <div class="col-xs-12">\n' +
     '    <h1 class="text-{{align}}">{{status}}</h1>\n' +
     '    <img src="{{img}}" class="img-responsive" alt="{{status}}">\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/header/templates/header-widget.html',
-    '<h1>HEADER</h1>\n' +
-    '<nav class="navbar" ng-class="{\'navbar-fixed-top\':fixed}">\n' +
-    '  <a class="navbar-brand navbar-brand-{{align}}" href="{{link}}" alt="{{text}}">\n' +
-    '    <span ng-if="img === undefined">{{text}}</span>\n' +
-    '    <span class="hiddentext" ng-if="img !== undefined">{{text}}</span>\n' +
-    '    <img ng-src="{{img}}" ng-if="img !== undefined">\n' +
-    '  </a>\n' +
-    '</nav>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/faq/templates/faq-widget.html',
-    '<div class="row">\n' +
-    '  <div class="col-xs-12" ng-switch on="type">\n' +
-    '    <div id="narvar-faq-slides" class="carousel slide" ng-switch-when="slides">\n' +
-    '      <div class="carousel-indicators-with-controls">\n' +
-    '        <a class="icon-prev" href="#narvar-faq-slides" data-slide="prev"></a>\n' +
-    '        <ol class="carousel-indicators">\n' +
-    '          <li data-target="#narvar-faq-slides" data-slide-to="{{$index}}" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}"></li>\n' +
-    '        </ol>\n' +
-    '        <a class="icon-next" href="#narvar-faq-slides" data-slide="next"></a>\n' +
-    '      </div>\n' +
-    '      <div class="carousel-inner" role="listbox">\n' +
-    '        <div class="carousel-item" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}">\n' +
-    '          <p><strong>{{tab.title}}</strong></p>\n' +
-    '          <p>{{tab.body}}</p>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div id="narvar-faq-tabs" role="tablist" ng-switch-default>\n' +
-    '      <div class="panel panel-default" ng-repeat="tab in tabs track by $index">\n' +
-    '        <div class="panel-heading" role="tab">\n' +
-    '          <p>\n' +
-    '            <a data-toggle="collapse" data-parent="#narvar-faq-tabs" href="#narvar-faq-tab-{{$index}}"><strong>{{tab.title}}</strong></a>\n' +
-    '          </p>\n' +
-    '        </div>\n' +
-    '        <div id="narvar-faq-tab-{{$index}}" class="panel-collapse collapse" role="tabpanel" ng-class="{\'in\': $index === 0}">\n' +
-    '          {{tab.body}}\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
     '  </div>\n' +
     '</div>\n' +
     '');

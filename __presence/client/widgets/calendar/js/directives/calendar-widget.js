@@ -20,6 +20,8 @@
         templateUrl : 'widgets/calendar/templates/calendar-widget.html',
         link        : function(scope, element, attrs) {
 
+          var scopeProp = R.prop(R.__, scope);
+
           scope.weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
           TrackingSvc.resources.tracking.get(function(response) {
@@ -38,8 +40,8 @@
             scope.estimatedDeliveryRangeEndDate  = R.path(['range_end', 'date'], _estimatedDelivery);
             scope.estimatedDeliveryRangeEndYear  = R.path(['range_end', 'year'], _estimatedDelivery);
 
-            scope.estimatedDeliveryRangeStartCalendarMonth = R.inc(R.prop('estimatedDeliveryRangeStartMonth', scope));
-            scope.estimatedDeliveryRangeEndCalendarMonth   = R.inc(R.prop('estimatedDeliveryRangeEndMonth', scope));
+            scope.estimatedDeliveryRangeStartCalendarMonth = R.inc(scopeProp('estimatedDeliveryRangeStartMonth'));
+            scope.estimatedDeliveryRangeEndCalendarMonth   = R.inc(scopeProp('estimatedDeliveryRangeEndMonth'));
 
             scope.carrierHolidays = R.mergeAll(
               R.map(R.createMapEntry(R.__, true), R.split(',', R.path(['tracking', 'carrier', 'holidays'], response)))
@@ -51,20 +53,20 @@
             );
 
             scope.numberOfDaysInMonth = new Date(
-              R.prop('estimatedDeliveryRangeStartYear', scope),
-              R.prop('estimatedDeliveryRangeStartCalendarMonth', scope),
+              scopeProp('estimatedDeliveryRangeStartYear'),
+              scopeProp('estimatedDeliveryRangeStartCalendarMonth'),
               0
             ).getDate();
 
-            scope.numberOfWeeksInMonth = Math.ceil(R.divide(R.prop('numberOfDaysInMonth', scope), 7));
+            scope.numberOfWeeksInMonth = Math.ceil(R.divide(scopeProp('numberOfDaysInMonth'), 7));
 
-            scope.rangeLastDate = (R.prop('estimatedDeliveryRangeEndDate', scope) >= R.prop('estimatedDeliveryRangeStartDate', scope))
-              ? R.prop('estimatedDeliveryRangeStartDate', scope)
-              : R.prop('numberOfDaysInMonth', scope);
+            scope.rangeLastDate = (scopeProp('estimatedDeliveryRangeEndDate') >= scopeProp('estimatedDeliveryRangeStartDate'))
+              ? scopeProp('estimatedDeliveryRangeStartDate')
+              : scopeProp('numberOfDaysInMonth');
 
             scope.monthLeadingDays = new Date(
-              R.prop('estimatedDeliveryRangeStartYear', scope),
-              R.prop('estimatedDeliveryRangeStartMonth', scope),
+              scopeProp('estimatedDeliveryRangeStartYear'),
+              scopeProp('estimatedDeliveryRangeStartMonth'),
               1
             ).getDay();
 
@@ -87,7 +89,7 @@
                   .month(scope.estimatedDeliveryRangeStartMonth)
                   .date(date);
 
-                return R.prop(['carrierDeliveryDays'], scope)[_moment.day()] && !R.path(['carrierHolidays', _moment.format('YYYYMMDD')], scope);
+                return scopeProp('carrierDeliveryDays')[_moment.day()] && !R.path(['carrierHolidays', _moment.format('YYYYMMDD')], scope);
               } else {
                 return false;
               }

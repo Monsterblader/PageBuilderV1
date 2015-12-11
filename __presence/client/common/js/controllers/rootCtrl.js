@@ -8,15 +8,13 @@
    * # RootCtrl
    * Root controller to handle app level failures and promise rejections
    */
-  angular.module('narvar').controller('RootCtrl', ['$rootScope', '$location', '$window', 'FlashSvc',
-    function ($rootScope, $location, $window, FlashSvc) {
+  angular.module('narvar').controller('RootCtrl', ['$rootScope', '$location', '$window',
+    function ($rootScope, $location, $window) {
 
       $rootScope.$on('$routeChangeError', function (event, current, previous, rejection) {
         // @todo Graceful failover before launch.
         $window.alert(rejection);
       });
-
-      FlashSvc.clearFlash();
 
       this.$location = $location;
 

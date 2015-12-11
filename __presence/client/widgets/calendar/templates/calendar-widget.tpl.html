@@ -1,0 +1,8 @@
+<div class="calendar-container">
+  <div class="calendar-row calendar-days">
+    <span class="calendar-date" ng-repeat="weekday in weekdays track by $index">{{weekday}}</span>
+    <div class="calendar-row" ng-repeat="week in calendarGrid track by $index">
+      <span class="calendar-date" ng-repeat="day in week track by $index" ng-class="{highlighted : isHighlighted(day)}" >{{day || '&nbsp;'}}</span>
+    </div>
+  </div>
+</div>

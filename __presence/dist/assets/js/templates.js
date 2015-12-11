@@ -5,6 +5,26 @@ try {
   module = angular.module('templates-app', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/calendar/templates/calendar-widget.html',
+    '<div class="calendar-container">\n' +
+    '  <div class="calendar-row calendar-days">\n' +
+    '    <span class="calendar-date" ng-repeat="weekday in weekdays track by $index">{{weekday}}</span>\n' +
+    '    <div class="calendar-row" ng-repeat="week in calendarGrid track by $index">\n' +
+    '      <span class="calendar-date" ng-repeat="day in week track by $index" ng-class="{highlighted : isHighlighted(day)}" >{{day || \'&nbsp;\'}}</span>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('widgets/edd/templates/edd-widget.html',
     '<div class="edd-container">\n' +
     '  <div class="edd-message" ng-class="{\'edd-show-message\' : deliveryStatusMessage}">{{deliveryStatusMessage}}</div>\n' +
@@ -59,69 +79,6 @@ module.run(['$templateCache', function($templateCache) {
     '    </div>\n' +
     '  </div>\n' +
     '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/faq/templates/faq-widget.html',
-    '<div class="row">\n' +
-    '  <div class="col-xs-12" ng-switch on="type">\n' +
-    '    <div id="narvar-faq-slides" class="carousel slide" ng-switch-when="slides">\n' +
-    '      <div class="carousel-indicators-with-controls">\n' +
-    '        <a class="icon-prev" href="#narvar-faq-slides" data-slide="prev"></a>\n' +
-    '        <ol class="carousel-indicators">\n' +
-    '          <li data-target="#narvar-faq-slides" data-slide-to="{{$index}}" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}"></li>\n' +
-    '        </ol>\n' +
-    '        <a class="icon-next" href="#narvar-faq-slides" data-slide="next"></a>\n' +
-    '      </div>\n' +
-    '      <div class="carousel-inner" role="listbox">\n' +
-    '        <div class="carousel-item" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}">\n' +
-    '          <p><strong>{{tab.title}}</strong></p>\n' +
-    '          <p>{{tab.body}}</p>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div id="narvar-faq-tabs" role="tablist" ng-switch-default>\n' +
-    '      <div class="panel panel-default" ng-repeat="tab in tabs track by $index">\n' +
-    '        <div class="panel-heading" role="tab">\n' +
-    '          <p>\n' +
-    '            <a data-toggle="collapse" data-parent="#narvar-faq-tabs" href="#narvar-faq-tab-{{$index}}"><strong>{{tab.title}}</strong></a>\n' +
-    '          </p>\n' +
-    '        </div>\n' +
-    '        <div id="narvar-faq-tab-{{$index}}" class="panel-collapse collapse" role="tabpanel" ng-class="{\'in\': $index === 0}">\n' +
-    '          {{tab.body}}\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('templates-app');
-} catch (e) {
-  module = angular.module('templates-app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('widgets/header/templates/header-widget.html',
-    '<h1>HEADER</h1>\n' +
-    '<nav class="navbar" ng-class="{\'navbar-fixed-top\':fixed}">\n' +
-    '  <a class="navbar-brand navbar-brand-{{align}}" href="{{link}}" alt="{{text}}">\n' +
-    '    <span ng-if="img === undefined">{{text}}</span>\n' +
-    '    <span class="hiddentext" ng-if="img !== undefined">{{text}}</span>\n' +
-    '    <img ng-src="{{img}}" ng-if="img !== undefined">\n' +
-    '  </a>\n' +
-    '</nav>\n' +
     '');
 }]);
 })();
@@ -312,6 +269,69 @@ module.run(['$templateCache', function($templateCache) {
     '  <div class="col-xs-12">\n' +
     '    <h1 class="text-{{align}}">{{status}}</h1>\n' +
     '    <img src="{{img}}" class="img-responsive" alt="{{status}}">\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/header/templates/header-widget.html',
+    '<h1>HEADER</h1>\n' +
+    '<nav class="navbar" ng-class="{\'navbar-fixed-top\':fixed}">\n' +
+    '  <a class="navbar-brand navbar-brand-{{align}}" href="{{link}}" alt="{{text}}">\n' +
+    '    <span ng-if="img === undefined">{{text}}</span>\n' +
+    '    <span class="hiddentext" ng-if="img !== undefined">{{text}}</span>\n' +
+    '    <img ng-src="{{img}}" ng-if="img !== undefined">\n' +
+    '  </a>\n' +
+    '</nav>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('templates-app');
+} catch (e) {
+  module = angular.module('templates-app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('widgets/faq/templates/faq-widget.html',
+    '<div class="row">\n' +
+    '  <div class="col-xs-12" ng-switch on="type">\n' +
+    '    <div id="narvar-faq-slides" class="carousel slide" ng-switch-when="slides">\n' +
+    '      <div class="carousel-indicators-with-controls">\n' +
+    '        <a class="icon-prev" href="#narvar-faq-slides" data-slide="prev"></a>\n' +
+    '        <ol class="carousel-indicators">\n' +
+    '          <li data-target="#narvar-faq-slides" data-slide-to="{{$index}}" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}"></li>\n' +
+    '        </ol>\n' +
+    '        <a class="icon-next" href="#narvar-faq-slides" data-slide="next"></a>\n' +
+    '      </div>\n' +
+    '      <div class="carousel-inner" role="listbox">\n' +
+    '        <div class="carousel-item" ng-repeat="tab in tabs track by $index" ng-class="{\'active\': $index === 0}">\n' +
+    '          <p><strong>{{tab.title}}</strong></p>\n' +
+    '          <p>{{tab.body}}</p>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div id="narvar-faq-tabs" role="tablist" ng-switch-default>\n' +
+    '      <div class="panel panel-default" ng-repeat="tab in tabs track by $index">\n' +
+    '        <div class="panel-heading" role="tab">\n' +
+    '          <p>\n' +
+    '            <a data-toggle="collapse" data-parent="#narvar-faq-tabs" href="#narvar-faq-tab-{{$index}}"><strong>{{tab.title}}</strong></a>\n' +
+    '          </p>\n' +
+    '        </div>\n' +
+    '        <div id="narvar-faq-tab-{{$index}}" class="panel-collapse collapse" role="tabpanel" ng-class="{\'in\': $index === 0}">\n' +
+    '          {{tab.body}}\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
     '  </div>\n' +
     '</div>\n' +
     '');

@@ -1,0 +1,37 @@
+calendar-widget {
+
+  display  : block;
+  position : relative;
+
+  .calendar-container {
+
+    background-color : #EFEFEF;
+    border-radius    : 5px;
+    padding          : 5px;
+    width            : 300px;
+
+    .calendar-row {
+
+    }
+
+    .calendar-date {
+      display       : inline-block;
+      text-align    : center;
+      font-size     : 14px;
+      height        : 32px;
+      width         : 32px;
+      line-height   : 32px;
+      box-sizing    : border-box;
+      border-radius : 20px;
+      margin        : 4px;
+
+      &.highlighted {
+        font-weight      : bold;
+        background-color : greenyellow;
+      }
+
+    }
+
+  }
+
+}

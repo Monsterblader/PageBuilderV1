@@ -26,6 +26,7 @@ module.exports = {
     'bower_components/ramda/dist/ramda.js',
     'bower_components/es5-shim/es5-shim.js',
     'bower_components/json3/lib/json3.js',
+    'bower_components/moment/moment.js',
 
     // Bootstrap (dependencies first)
     'bower_components/jquery/dist/jquery.js',

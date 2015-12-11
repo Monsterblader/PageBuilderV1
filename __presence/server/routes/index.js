@@ -12,7 +12,7 @@ router.get('/', indexCtrl);
 router.get('/api/v0.0.0/tracking', function(req, res) {
   res.json({
     tracking : {
-      status             : 'In-Transit',
+      status : 'In-Transit',
       estimated_delivery : {
         range_start : {
           date  : 25,
@@ -29,6 +29,11 @@ router.get('/api/v0.0.0/tracking', function(req, res) {
       },
       delivery           : {
         status : 'ON_ITS_WAY'
+      },
+      carrier : {
+        start_day : 2,
+        end_day   : 6,
+        holidays  : '20151225'
       }
     }
   });
@@ -37,7 +42,7 @@ router.get('/api/v0.0.0/tracking', function(req, res) {
 // TODO Swap this shim with an actual end point
 router.post('/sms/:retailerName/signup', function(req, res) {
   res.json({
-    status : 'Posted SMS signup to ' + R.path(['params','retailerName'], req)
+    status : 'Posted SMS signup to ' + R.path(['params', 'retailerName'], req)
   });
 });
 

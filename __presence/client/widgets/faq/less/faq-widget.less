@@ -1,12 +1,13 @@
 faq-widget {
 
-  display  : block;
-  position : relative;
-
-  border : 1px solid orange;
+  display    : block;
+  position   : relative;
+  height     : 452px;
+  width      : 100%;
+  margin     : 0 16px;
+  box-sizing : border-box;
 
   .carousel-indicators-with-controls {
-    border : 1px solid red;
     position     : absolute;
     bottom       : -20px;
     left         : 50%;
@@ -17,7 +18,6 @@ faq-widget {
     text-align   : center;
 
     .carousel-indicators {
-      border : 1px solid blue;
       position     : relative;
       display      : inline-block;
       bottom       : auto;
@@ -72,5 +72,68 @@ faq-widget {
 
     }
 
+  }
+
+  #faq-questions {
+    height      : 100%;
+    width       : 302px;
+    margin-left : -16px;
+    overflow-y  : scroll;
+    padding     : 0 16px;
+    box-sizing  : border-box;
+  }
+
+  .question-container {
+    width      : 100%;
+    height     : auto;
+    float      : right;
+    box-sizing : border-box;
+    margin     : 8px 0;
+  }
+
+  .icon-chevron {
+    height    : 24px;
+    width     : 24px;
+    float     : left;
+    transform : rotate(-90deg);
+  }
+
+  .icon-chevron:hover {
+    cursor : pointer;
+  }
+
+  .icon-rotated {
+    transform : rotate(0deg);
+  }
+
+  .question-answer-box {
+    margin-left : 8px;
+    width       : 238px;
+    float       : right;
+  }
+
+  .question-box {
+    height      : auto;
+    min-height  : 24px;
+    line-height : 1.2em;
+    padding-top : 4px;
+  }
+
+  .answer-box {
+    height        : auto;
+    margin-bottom : 8px;
+
+  }
+
+  .link {
+    font-size : 14px;
+    color     : #F65300;
+    cursor    : pointer;
+  }
+
+  .answer-box {
+    font-size   : .875em;
+    color       : #212121;
+    line-height : 1.2em;
   }
 }
